@@ -10,7 +10,7 @@ assignees: ''
 
 As a **role** I can **capability** so that **received benefit**
 
-###Acceptance Criterias: 
+### Acceptance Criterias: 
 
 -
 
@@ -19,4 +19,4 @@ As a **role** I can **capability** so that **received benefit**
 -
 
 
-###Tasks
+### Tasks:
