@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views import generic
+from django.contrib import messages
+from django.template import loader
 from django.http import HttpResponse
+from .models import Post
 
 
 # Create your views here.
-def main_message(request):
-    return HttpResponse("Hello World!")
-
-
+def LandingPage(request):
+    return render(request, 'landing_page/index.html')

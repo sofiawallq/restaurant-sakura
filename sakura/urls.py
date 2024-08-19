@@ -20,6 +20,6 @@ from landing_page import views as landing_page_views
 
 
 urlpatterns = [
-    path('landing_page/', landing_page_views.main_message, name='landing_page'),
+    path('landing_page/', landing_page_views.LandingPage, name='landing_page'),
     path('admin/', admin.site.urls),
 ]

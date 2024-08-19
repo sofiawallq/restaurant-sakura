@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 # Create your models here.
 STATUS = ((0, "Draft"), (1, "Published"))
 
-# Create your models here.
 class Post(models.Model):
     """
     Stores a single blog post entry related to :model: `auth.User` and :model: `blog.Post`.
