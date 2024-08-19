@@ -31,8 +31,29 @@
 
 ## UX Design
 
+### User Stories
+
+An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves and the wont-have - all in line with ...
+
+
+EPIC: Book a table
+
+EPIC: Change or delete a reservation
+
+EPIC: Contact the restaurant
+
+EPIC: Locate the restaurant
+
+EPIC: Look at the menu
+
+EPIC: Handle bookings(administrator)
+
+
 
 ### Wireframes
+
+Wireframes for both the webdesign and mobile design were made using Balsamique(LÄNK). The apporach was quite simple but straight forward and every view got its own wireframe to make the code process as simple as possible when the design was already set. 
+
 
 
 ### Database Design
