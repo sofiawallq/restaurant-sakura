@@ -1,0 +1,19 @@
+.navbar {
+    padding: 0px;
+    background-color: white;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.img-fluid {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+}
