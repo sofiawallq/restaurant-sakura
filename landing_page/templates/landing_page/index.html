@@ -5,24 +5,22 @@
 <!-- index.html content starts here -->
 {% block header %}
 
-<div class="container-fluid">
+<div class="container-fluid header">
   <div class="row">
-    <div class="col-12 mt-3">
-      <img src="../static/images/pexels-quark-studio-1159039-3201921.jpg" class="img-fluid"
-        alt="image of restaurant interior">
-      <section class="callout jumbotron text-center">
-        <h1>Welcome to restaurant Sakura!</h1>
+    <div class="col-12 callout jumbotron text-center">
+        <h1 class="jumbotron-header">Welcome to restaurant Sakura!</h1>
         <p>A dining experience focusing on asian cuisine</p>
-        <button type="button" class="btn btn-success">Book a table</button>
-        <button type="button" class="btn btn-success">Menu</button>
-      </section>  
+        <button type="button" class="btn btn-success btn-lg">Book a table</button>
+        <button type="button" class="btn btn-success btn-lg">Menu</button>
     </div>
   </div>
+</div>  
 
-  {% endblock header %}
+{% endblock header %}
 
-  {% block information %}
+{% block information %}
 
+<div class="container-fluid information">  
   <div class="row">
     <div class="col-12">
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -32,29 +30,37 @@
         laborum."</p>
     </div>
   </div>
+</div>  
 
-  {% endblock information %}
+{% endblock information %}
 
-  {% block booking %}
+{% block booking %}
 
+<div class="container-fluid booking">
   <div class="row">
-    <div class="col-6">
-      <p>Imaaaaage</p>
+    <div class="col-3 mt-3 booking-image">
+      <img src="/static/images/dinner_plate.png" alt="image of dinner plate">
     </div>
-    <div class="col-6"><button type="button" class="btn btn-success">Book a table</button></div>
-  </div>
-
-  {% endblock booking %}
-
-  {% block menu %}
-
-  <div class="row">
-    <div class="col-6"><button type="button" class="btn btn-success">View our menues</button></div>
-    <div class="col-6">
-      <p>Imaaaaage</p>
+    <div class="col-3 mt-3">
+      <button type="button" class="btn btn-success">Book a table</button>
     </div>
   </div>
+</div>  
 
-  {% endblock menu %}
+{% endblock booking %}
 
+{% block menu %}
+
+<div class="container-fluid menu">
+  <div class="row">
+    <div class="col-6 mt-3">
+      <button type="button" class="btn btn-success">View our menues</button>
+    </div>
+    <div class="col-6 mt-3 menu-image">
+      <img src="/static/images/drinks.png" alt="image of drinks">
+    </div>
+  </div>
 </div>
+
+{% endblock menu %}
+

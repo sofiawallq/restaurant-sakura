@@ -1,9 +1,9 @@
 body {
-    background-color: #FCECEC;
+    background-color: rgb(255,236,236);
 }
 
 nav {
-    background-color: #FCECEC;
+    background-color: rgb(255,236,236);
 }
 
 .nav-item {
@@ -22,7 +22,28 @@ nav {
     float: right;
 }
 
-.img-fluid {
-    display: block;
+.header {
+    height: 50vh;
+    background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     margin: auto;
 }
+
+.callout {
+    background-color: rgba(255,236,236,0.8);
+    padding: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.booking-image {
+    display: flex;
+    align-items: center;
+}
+
