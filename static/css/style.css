@@ -1,19 +1,28 @@
-.navbar {
-    padding: 0px;
-    background-color: white;
+body {
+    background-color: #FCECEC;
+}
+
+nav {
+    background-color: #FCECEC;
+}
+
+.nav-item {
+    margin: auto;
 }
 
 .icon-link {
     text-decoration: none;
     color: black;
-    font-size: 2rem;
-    margin: 0px;
-    padding: 0px;
+    font-size: 1.5rem;
+    margin: 5px;
     display: inline-block;
 }
 
+.social {
+    float: right;
+}
+
 .img-fluid {
-    max-width: 90%;
     display: block;
     margin: auto;
 }

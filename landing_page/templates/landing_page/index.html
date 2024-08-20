@@ -4,11 +4,57 @@
 
 <!-- index.html content starts here -->
 {% block header %}
-<div>
-  <img src="../static/images/pexels-quark-studio-1159039-3201921.jpg" class="img-fluid" alt="image of restaurant interior">
-</div>  
-{% endblock %}
 
-{% block booking %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 mt-3">
+      <img src="../static/images/pexels-quark-studio-1159039-3201921.jpg" class="img-fluid"
+        alt="image of restaurant interior">
+      <section class="callout jumbotron text-center">
+        <h1>Welcome to restaurant Sakura!</h1>
+        <p>A dining experience focusing on asian cuisine</p>
+        <button type="button" class="btn btn-success">Book a table</button>
+        <button type="button" class="btn btn-success">Menu</button>
+      </section>  
+    </div>
+  </div>
 
-{% endblock %}
+  {% endblock header %}
+
+  {% block information %}
+
+  <div class="row">
+    <div class="col-12">
+      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum."</p>
+    </div>
+  </div>
+
+  {% endblock information %}
+
+  {% block booking %}
+
+  <div class="row">
+    <div class="col-6">
+      <p>Imaaaaage</p>
+    </div>
+    <div class="col-6"><button type="button" class="btn btn-success">Book a table</button></div>
+  </div>
+
+  {% endblock booking %}
+
+  {% block menu %}
+
+  <div class="row">
+    <div class="col-6"><button type="button" class="btn btn-success">View our menues</button></div>
+    <div class="col-6">
+      <p>Imaaaaage</p>
+    </div>
+  </div>
+
+  {% endblock menu %}
+
+</div>
