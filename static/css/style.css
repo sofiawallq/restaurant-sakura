@@ -10,6 +10,10 @@ nav {
     margin: auto;
 }
 
+.navbar-nav {
+    flex-direction: row;
+}
+
 .icon-link {
     text-decoration: none;
     color: black;
@@ -42,8 +46,14 @@ h1 {
     text-transform: uppercase;
 }
 
-.booking-image {
-    display: flex;
+.booking-image img, .menu-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-btn {
     align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 

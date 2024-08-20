@@ -5,7 +5,7 @@
 <!-- index.html content starts here -->
 {% block header %}
 
-<div class="container-fluid header">
+<div class="container header">
   <div class="row">
     <div class="col-12 callout jumbotron text-center">
         <h1 class="jumbotron-header">Welcome to restaurant Sakura!</h1>
@@ -20,7 +20,7 @@
 
 {% block information %}
 
-<div class="container-fluid information">  
+<div class="container information mt-3">  
   <div class="row">
     <div class="col-12">
       <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -36,13 +36,13 @@
 
 {% block booking %}
 
-<div class="container-fluid booking">
+<div class="container booking mt-3">
   <div class="row">
-    <div class="col-3 mt-3 booking-image">
+    <div class="col-6 booking-image">
       <img src="/static/images/dinner_plate.png" alt="image of dinner plate">
     </div>
-    <div class="col-3 mt-3">
-      <button type="button" class="btn btn-success">Book a table</button>
+    <div class="col-6">
+      <button type="button" class="btn btn-success btn-lg book-btn">Book a table</button>
     </div>
   </div>
 </div>  
@@ -51,12 +51,12 @@
 
 {% block menu %}
 
-<div class="container-fluid menu">
+<div class="container menu mt-3">
   <div class="row">
-    <div class="col-6 mt-3">
+    <div class="col-6">
       <button type="button" class="btn btn-success">View our menues</button>
     </div>
-    <div class="col-6 mt-3 menu-image">
+    <div class="col-6 menu-image">
       <img src="/static/images/drinks.png" alt="image of drinks">
     </div>
   </div>
