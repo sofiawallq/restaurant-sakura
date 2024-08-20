@@ -8,10 +8,10 @@
 <div class="container header">
   <div class="row">
     <div class="col-12 callout jumbotron text-center">
-        <h1 class="jumbotron-header">Welcome to restaurant Sakura!</h1>
+        <h1 class="jumbotron-header">Welcome to Restaurant Sakura!</h1>
         <p>A dining experience focusing on asian cuisine</p>
-        <button type="button" class="btn btn-success btn-lg">Book a table</button>
-        <button type="button" class="btn btn-success btn-lg">Menu</button>
+        <button type="button" class="btn btn-secondary btn-lg header-btn">Book a table</button>
+        <button type="button" class="btn btn-secondary btn-lg header-btn">Menu</button>
     </div>
   </div>
 </div>  
@@ -28,6 +28,7 @@
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum."</p>
+      <h4>Opening hours:</h4>
     </div>
   </div>
 </div>  
@@ -41,23 +42,38 @@
     <div class="col-6 booking-image">
       <img src="/static/images/dinner_plate.png" alt="image of dinner plate">
     </div>
-    <div class="col-6">
-      <button type="button" class="btn btn-success btn-lg book-btn">Book a table</button>
+    <div class="col-6 book-btn">
+      <button type="button" class="btn btn-secondary btn-lg">Book a table</button>
     </div>
   </div>
 </div>  
 
 {% endblock booking %}
 
+{% block contact %}
+
+<div class="container contact mt-3">
+  <div class="row">
+    <div class="col-6">
+      <h2>Contact us at:</h2>
+      <p>Mail:</p>
+      <p>Phone number:</p>
+      <p>Contact form</p>
+    </div>
+    <div class="col-6 contact-image">
+      <img src="/static/images/drinks.png" alt=" image of drinks">
+    </div>
+  </div>
+</div>
+
+{% endblock contact %}
+
 {% block menu %}
 
 <div class="container menu mt-3">
   <div class="row">
-    <div class="col-6">
-      <button type="button" class="btn btn-success">View our menues</button>
-    </div>
-    <div class="col-6 menu-image">
-      <img src="/static/images/drinks.png" alt="image of drinks">
+    <div class="col-12 menu-btn">
+      <button type="button" class="btn btn-secondary btn-lg">View our menues</button>
     </div>
   </div>
 </div>

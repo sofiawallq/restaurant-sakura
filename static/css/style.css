@@ -1,5 +1,10 @@
 body {
     background-color: rgb(255,236,236);
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Courgette', cursive;
 }
 
 nav {
@@ -10,20 +15,12 @@ nav {
     margin: auto;
 }
 
-.navbar-nav {
-    flex-direction: row;
-}
-
 .icon-link {
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
     margin: 5px;
-    display: inline-block;
-}
-
-.social {
-    float: right;
+    display: flex;
 }
 
 .header {
@@ -37,23 +34,44 @@ nav {
     margin: auto;
 }
 
+.btn-secondary {
+    width: 10em;
+    margin: 10px;
+    padding: 15px 0px;
+    font-size: 1.2em;
+    font-family: 'Courgette', cursive;
+}
+
+
 .callout {
     background-color: rgba(255,236,236,0.8);
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 h1 {
-    text-transform: uppercase;
+    font-family: 'Courgette', cursive;
+    font-size: 2.5em;
 }
 
-.booking-image img, .menu-image img {
+h4 {
+    font-family: 'Courgette', cursive;
+}
+
+.booking-image img, .contact-image img {
     max-width: 100%;
     height: auto;
 }
 
-.book-btn {
+.book-btn, .menu-btn {
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.social {
+    flex-direction: row;
     margin: auto;
 }
+
+
 
