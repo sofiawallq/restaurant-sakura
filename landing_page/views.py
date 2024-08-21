@@ -7,5 +7,5 @@ from .models import Post
 
 
 # Create your views here.
-def LandingPage(request):
+def home_page(request):
     return render(request, 'landing_page/index.html')
