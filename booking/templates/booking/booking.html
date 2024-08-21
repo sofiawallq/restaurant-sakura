@@ -12,20 +12,17 @@
 
             <!--Contact form-->
             <form method="post">
-                {{ booking_form | crispy }}
                 {% csrf_token %}
+                {{ booking_form.media }} 
+                {{ booking_form | crispy }}
                 <button class="btn btn-secondary" type="submit">Make reservation</button>
             </form>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7x0me+N5+tWZLg0Hgf8dHDq5P+H/kd5M6oF" crossorigin="anonymous"></script>
-
-    {{ booking_form.media }}
     
     <!-- DateTimePicker script -->
     <script>
-        $(function () {
+        $(document).ready(function() {
             $('#id_date').datetimepicker({
                 format: 'YYYY-MM-DD',
                 useCurrent: false

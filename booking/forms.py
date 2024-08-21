@@ -5,16 +5,10 @@ from .models import BookATable
 class BookATableForm(forms.ModelForm):
     class Meta:
         model = BookATable
-        fields = ['firstname', 'lastname', 'email', 'date', 'time', 'message']
+        fields = ['firstname', 'lastname', 'email', 'date', 'time', 'message']         
         widgets = {
-            'date': DatePickerInput(
-                format='%Y-%m-%d',
-                attrs={'class': 'form-control', 'placeholder': 'Select date'}
-            ),
-            'time': TimePickerInput(
-                format='%H:%M',
-                attrs={'class': 'form-control', 'placeholder': 'Select time'}
-            ),
-        }          
+            'date': DatePickerInput(options={"format": "YYYY-MM-DD", "placeholder": "Select date"}),
+            'time': TimePickerInput(options={"format": "HH:mm", "placeholder": "Select time"}),
+        }
 
              
