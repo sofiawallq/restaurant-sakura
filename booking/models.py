@@ -15,4 +15,4 @@ class BookATable(models.Model):
     read = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Booking made by {self.name} on {self.date} at {self.time}"
+        return f"Booking made by {self.lastname} on {self.date} at {self.time}"
