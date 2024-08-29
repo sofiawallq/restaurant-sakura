@@ -102,7 +102,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-                                    aria-current="page" href="{% url 'account_login' %}">Login</a>
+                                    aria-current="page" href="{% url 'account_login' %}">Sign In</a>
                             </li>
                             {% endif %}
                         </ul>
@@ -135,6 +135,20 @@
     </div>
 
     <main>
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
+
+        {% block login %}
+
+        {% endblock login %}
+
+        {% block signup %}
+
+        {% endblock signup %}
+
         {% block header %}
         <!-- Header image, h1 and button content goes here -->
         {% endblock header %}
