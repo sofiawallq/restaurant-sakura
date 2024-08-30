@@ -48,12 +48,17 @@ nav {
     padding: 20px 40px;
 }
 
-h1, h2 {
+h1 {
     font-family: 'Courgette', cursive;
     font-size: 2.5em;
 }
 
-h4 {
+h2 {
+    font-family: 'Courgette', cursive;
+    font-size: 2em; 
+}
+
+h3, h4 {
     font-family: 'Courgette', cursive;
 }
 
@@ -74,7 +79,7 @@ h4 {
 }
 
 .menu-header {
-    height: 50vh;
+    height: 70vh;
     background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
