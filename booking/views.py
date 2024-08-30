@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import BookATableForm
+from .models import Booking
+
 
 def book_table(request):
     if request.method == "POST":
@@ -19,3 +22,8 @@ def book_table(request):
             'booking_form': booking_form
         }
     )
+
+@login_required
+def booking_list(request):
+    bookings = Booking.objects.filter(user=request.user)
+    return render(request, 'booking/booking_list.html', {'bookings': bookings})    
