@@ -27,3 +27,23 @@ def book_table(request):
 def booking_list(request):
     bookings = Booking.objects.filter(user=request.user)
     return render(request, 'booking/booking_list.html', {'bookings': bookings})    
+
+@login_required
+def booking_edit(request, booking_id=None):
+    if booking_id:
+        booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    else:
+        booking = None
+
+    if request.method == "POST":
+        form = BookATableForm(request.POST, instance=booking)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user  #Connect logged in user to reservation
+            booking.save()
+            messages.add_message(request, messages.SUCCESS, "Reservation updated successfully!")
+            return redirect('booking_list')
+    else:
+        form = BookATableForm(instance=booking)
+
+    return render(request, 'booking/booking_edit.html', {'form': form})
