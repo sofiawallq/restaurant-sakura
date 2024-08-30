@@ -10,8 +10,10 @@
     <div class="col-12 callout jumbotron text-center">
         <h1 class="jumbotron-header">Welcome to Restaurant Sakura!</h1>
         <p>A dining experience focusing on asian cuisine</p>
-        <button type="button" class="btn btn-secondary btn-lg header-btn">Book a table</button>
-        <button type="button" class="btn btn-secondary btn-lg header-btn">Menu</button>
+        <button type="button" class="btn btn-secondary btn-lg header-btn"><a class="nav-link {% if request.path == booking_url %}active"
+          aria-current="page{% endif %}" href="{% url 'booking' %}">Book a table</a></button>
+        <button type="button" class="btn btn-secondary btn-lg header-btn"><a class="nav-link {% if request.path == menues_url %}active"
+          aria-current="page{% endif %}" href="{% url 'menues' %}">Menu</a></button>
     </div>
   </div>
 </div>  
