@@ -1,0 +1,6 @@
+<h1>{% if form.instance.id %}Edit{% else %}New{% endif %} Reservation</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-secondary" type="submit">Save</button>
+</form>
