@@ -1,0 +1,10 @@
+<h1>Your Reservations</h1>
+<ul>
+    {% for booking in bookings %}
+        <li>
+            {{ booking.date }} at {{ booking.time }} for {{ booking.number_of_guests }} guests
+            <a href="{% url 'booking_edit' booking.id %}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'booking_new' %}">New Reservation</a>
