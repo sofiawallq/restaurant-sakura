@@ -5,10 +5,11 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 callout jumbotron text-center">
+        <div class="col-12 jumbotron menu-header text-center">
             <button class="btn btn-secondary btn-lg header-btn" type="button" ><a class="nav-link {% if request.path == food_menu_url %}active"
                 aria-current="page{% endif %}" href="{% url 'food_menu' %}">Food menu</a></button>
-            <button class="btn btn-secondary btn-lg header-btn" type="button" >Drink menu</button></a>
+            <button class="btn btn-secondary btn-lg header-btn" type="button" ><a class="nav-link {% if request.path == drink_menu_url %}active"
+                aria-current="page{% endif %}" href="{% url 'drink_menu' %}">Drink menu</button></a>
         </div>
     </div>
 </div>

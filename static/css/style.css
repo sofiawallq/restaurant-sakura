@@ -73,5 +73,15 @@ h4 {
     margin: auto;
 }
 
+.menu-header {
+    height: 50vh;
+    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
 
 
