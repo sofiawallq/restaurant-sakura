@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import BookATableForm
-from .models import Booking
+from .models import BookATable
 
 
 def book_table(request):
@@ -25,8 +25,9 @@ def book_table(request):
 
 @login_required
 def booking_list(request):
-    bookings = Booking.objects.filter(user=request.user)
-    return render(request, 'booking/booking_list.html', {'bookings': bookings})    
+    bookings = BookATable.objects.filter(user=request.user)
+    return render(request, 'booking/booking_list.html', {'bookings': bookings}) 
+
 
 @login_required
 def booking_edit(request, booking_id=None):
@@ -46,4 +47,4 @@ def booking_edit(request, booking_id=None):
     else:
         form = BookATableForm(instance=booking)
 
-    return render(request, 'booking/booking_edit.html', {'form': form})
+    return render(request, 'booking/booking_edit.html', {'form': form})  
