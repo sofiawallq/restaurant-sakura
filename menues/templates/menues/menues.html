@@ -6,10 +6,34 @@
 <div class="container">
     <div class="row">
         <div class="col-12 jumbotron menu-header text-center">
-            <button class="btn btn-secondary btn-lg header-btn" type="button" ><a class="nav-link {% if request.path == food_menu_url %}active"
-                aria-current="page{% endif %}" href="{% url 'food_menu' %}">Food menu</a></button>
-            <button class="btn btn-secondary btn-lg header-btn" type="button" ><a class="nav-link {% if request.path == drink_menu_url %}active"
-                aria-current="page{% endif %}" href="{% url 'drink_menu' %}">Drink menu</button></a>
+
+            <button class="btn btn-secondary btn-lg header-btn" type="button" data-bs-toggle="modal"
+                data-bs-target="#foodMenuModal">Food menu</button>
+            <button class="btn btn-secondary btn-lg header-btn" type="button">Drink menu</button>
+        </div>
+
+        <!-- Modal för Food Menu -->
+        <div class="modal fade" id="foodMenuModal" tabindex="-1" aria-labelledby="foodMenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="foodMenuModalLabel">Food Menu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Starters</h2>
+                        <p>Modal body text goes here.</p>
+                        <h2>Main courses</h2>
+                        <p>Hi</p>
+                        <h2>Dessert</h2>
+                        <p>Woop</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

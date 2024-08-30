@@ -13,7 +13,7 @@
         <button type="button" class="btn btn-secondary btn-lg header-btn"><a class="nav-link {% if request.path == booking_url %}active"
           aria-current="page{% endif %}" href="{% url 'booking' %}">Book a table</a></button>
         <button type="button" class="btn btn-secondary btn-lg header-btn"><a class="nav-link {% if request.path == menues_url %}active"
-          aria-current="page{% endif %}" href="{% url 'menues' %}">Menu</a></button>
+          aria-current="page{% endif %}" href="{% url 'menues' %}">Menues</a></button>
     </div>
   </div>
 </div>  
@@ -45,7 +45,8 @@
       <img src="/static/images/dinner_plate.png" alt="image of dinner plate">
     </div>
     <div class="col-sm-12 col-md-6 book-btn">
-      <button type="button" class="btn btn-secondary btn-lg">Book a table</button>
+      <button type="button" class="btn btn-secondary btn-lg"><a class="nav-link {% if request.path == booking_url %}active"
+        aria-current="page{% endif %}" href="{% url 'booking' %}">Book a table</a></button>
     </div>
   </div>
 </div>  
@@ -75,7 +76,8 @@
 <div class="container menu mt-3">
   <div class="row">
     <div class="col-12 menu-btn">
-      <button type="button" class="btn btn-secondary btn-lg">View our menues</button>
+      <button type="button" class="btn btn-secondary btn-lg"><a class="nav-link {% if request.path == menues_url %}active"
+        aria-current="page{% endif %}" href="{% url 'menues' %}">View our menues</a></button>
     </div>
   </div>
 </div>
