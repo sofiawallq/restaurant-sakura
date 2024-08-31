@@ -134,6 +134,8 @@ Wireframes for both the webdesign and mobile design were made using Balsamique(L
 
 ### Content
 
+Inspiration for the food and drink menues I borrowed from two of my favourite restaurants here in Gothenburg, Sweden: [Toso](https://toso.nu/) and [Cheri-Lee](https://www.cheri-lee.se/).
+
 
 ### Media
 
