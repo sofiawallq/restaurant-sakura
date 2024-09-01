@@ -86,9 +86,9 @@
                                     aria-current="page{% endif %}" href="{% url 'contact' %}">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == booking_url %}active"
-                                    aria-current="page{% endif %}" href="{% url 'booking' %}"><button type="button"
-                                        class="btn btn-outline-secondary">Book a table</button></a>
+                                <button type="button"
+                                    class="btn btn-outline-secondary"><a class="nav-link {% if request.path == booking_url %}active"
+                                    aria-current="page{% endif %}" href="{% url 'booking' %}">Book a table</a></button>
                             </li>
                         </ul>
 
@@ -183,8 +183,9 @@
         {% block menu %}
         <!-- Menu content goes here -->
         {% endblock menu %}
-
+        
     </main>
+
 
     <footer class="container mt-3">
         <div class="row">
@@ -192,11 +193,10 @@
                 src="{% static 'favicon/favicon-32x32.png' %}" alt="Logo" width="30" height="24"
                 class="d-inline-block align-text-top"> Restaurant Sakura</a>
             <h5>2024 &copy; Sofia Wallsquid</h5>
-            <a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
-                    href="{% url 'contact' %}"><button type="button" class="btn btn-outline-secondary">Contact</a>
-            <a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}"
-                    href="{% url 'booking' %}"><button type="button" class="btn btn-outline-secondary">Book a
-                        table</button></a>
+            <button type="button" class="btn btn-outline-secondary"><a class="nav-link {% if request.path == contact_url %}active" aria-current="page{% endif %}"
+                    href="{% url 'contact' %}">Contact</a></button>
+            <button type="button" class="btn btn-outline-secondary"><a class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}"
+                    href="{% url 'booking' %}">Book a table</a></button>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="icon-link" href="http://www.facebook.com" target=”_blank”><i
