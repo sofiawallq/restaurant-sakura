@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 class BookATable(models.Model):
@@ -13,9 +14,9 @@ class BookATable(models.Model):
     email = models.EmailField(unique=True)
     date = models.DateField()
     time = models.TimeField()
+    guests = models.PositiveIntegerField(validators=[MinValueValidator(1)], default=1)
     message = models.TextField()
     read = models.BooleanField(default=False)
 
     def __str__(self):
         return f"Booking made by {self.lastname} on {self.date} at {self.time}"
-    

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import BookATableForm
@@ -11,7 +11,7 @@ def book_table(request):
         if booking_form.is_valid():
             booking_form.save()
             messages.add_message(request, messages.SUCCESS, "Reservation confirmed! See you at the table")
-            return redirect('success_page')  # Omdirigera till en framgångssida eller annan lämplig vy
+            return HttpResponse('Reservation confirmed! See you at the table')
     else:
         booking_form = BookATableForm()
 

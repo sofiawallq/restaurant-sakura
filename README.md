@@ -146,6 +146,21 @@ On the page called "Book a table" the user has the option to fill out a form to 
 
 ## Technologies
 
+__Stack__
+HTML5
+CSS3
+JavaScript
+Python
+
+__Frameworks__
+Django
+
+__Libraries & Additional Programs/Software/Tools__
+CI Database URL
+Django All Auth
+
+Gunicorn
+
 
 ## Manual testing
 
