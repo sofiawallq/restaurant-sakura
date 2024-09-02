@@ -48,9 +48,9 @@ The live website can be seen [here](LÄNK)
 
 ### User Stories
 
-An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with MoSCoW prioritazion method.
+An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
 
-I do think many of my User Stories should have been split into more detailed stories if this was a project that were to be used by a restaurant IRL. For example the "Contact restaurant" User Story could have been split up into stories about reading the contact info, creating the form fields, getting a respones and so on - but in this project I focused on the process of creating some Stories to draw out my process. 
+I do think many of my User Stories should have been split into more detailed stories if this was a project that were to be used by an actual existing restaurant. For example the "Contact restaurant" User Story could have been split up into stories about reading the contact info, creating the form fields, getting a respons and so on - but in this project I focused on the process of creating some Stories to draw out my main process.
 
 
 __EPIC: Book a table__
@@ -64,7 +64,6 @@ __EPIC: Contact the restaurant__
 __EPIC: Locate the restaurant__
 
 __EPIC: View the menu__
-
 
 
 
@@ -92,7 +91,7 @@ There were 13 wireframes made in total, which can all be found [here](/wireframe
 
 ### Colour scheme
 
-
+Since Sakura means Cherry Blossom, I let cherry blossoms set the colour scheme for the page. The soft pink is in focus, accompanied by a mid tone grey on buttons and other details. I think the use of not to many colours allows the images and text to take the center stage, which is exactly my goal and what I imagine a restaurant would want. 
 
 
 ### Project planning
