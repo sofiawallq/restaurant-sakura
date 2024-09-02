@@ -1,6 +1,9 @@
 ## Table of content
-- UX Design
+- UX/UI Design
+  - User Stories
   - Wireframes
+  - Project Planning 
+    - Agile methologies
   - Database design
 - Features
   - Header
@@ -29,7 +32,7 @@
   - Media
 
 
-## UX Design
+## UX/UI Design
 
 ### User Stories
 
@@ -58,15 +61,40 @@ The first example shows the landing page viewed in a browser on a computer or la
 
 ![printscreen](/wireframes/Main%20landing%20page.png)
 
+Below is a wireframe for the landing page on a computer or larger tablet when the visitor scrolls down a bit, it shows a feature with an image gallery that would be a nice feature, but unfortunately it did not make it into the project at this point due to other parts with higher priority. 
+
+![printscreen](/wireframes/Third%20view%20landing%20page.png)
+
+Next up are some of the wireframes for the mobile view, I wanted the main view on mobile screens to be quite simple and straight forward. A drop down menu instead of a navigation bar to save som space, and focus on the jumbotron plus booking and menues. Below is also an example of one of the projects other pages in mobile view - the Contact page where site visitors can find all of the information the need to get in contact with the restaurant, or fill out a form if they wish.
+
+![printscreen](/wireframes/Mobile%20landing%20first%20view.png)![printscreen](/wireframes/Mobile%20Contact%20page.png)
+
+Here you can view the same Contact page, but designed for a web browser instead. Here Bootstraps grid system came in really handy to simplify the process of making every page responsive for all screen sizes.
+
+![printscreen](/wireframes/Contact%20page.png)
+
+There were 13 wireframes made in total, which can all be found [here](/wireframes/)
 
 
-![printscreen]()
+### Project planning
 
-![printscreen]()
+__Agile methodologies__
 
-![printscreen]()
+- Kanban board - I used the Project Board in Github for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with some tasks, to clarify for myself what each User Story demanded of me. Some USer Stories were written in different ways in the first stage, but only one of them made it to the Project board. 
 
-All wireframes can be found [here](/wireframes/)
+As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really helped me to focus on the functionality of the project first.
+
+- Epics - I really understand the value of Epics for larger projects, to give a better overview of the projects user stories and further prioritize. But they seem a little over-ambitious for a project of this size, although they work well with my brain.
+
+- MoSCoW Prioritization - The User Stories are labeled with one of the following three categories, all according to the MoSCow prioritization methodology:
+
+Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority.
+
+Should Have: Important features that should be included if possible, but they are not critical for the website to function.
+
+Could Have: Desirable features that can be added if there is enough time and resources.
+
+Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
 
 
 ### Database Design
@@ -156,6 +184,7 @@ __Frameworks__
 Django
 
 __Libraries & Additional Programs/Software/Tools__
+- Bootstrap -
 CI Database URL
 Django All Auth
 
