@@ -10,7 +10,8 @@ def contact_restaurant(request):
         contact_form = ContactRestaurant(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(request, messages.SUCCESS, "Message received! We will get back to you as soon as possible!")
+            messages.add_message(request, messages.SUCCESS, "New message recieved.")
+            return HttpResponse("Message received! We will get back to you as soon as possible!")
 
     return render(
         request, 

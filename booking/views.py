@@ -10,7 +10,7 @@ def book_table(request):
         booking_form = BookATableForm(data=request.POST)
         if booking_form.is_valid():
             booking_form.save()
-            messages.add_message(request, messages.SUCCESS, "Reservation confirmed! See you at the table")
+            messages.add_message(request, messages.SUCCESS, "New guest reservation")
             return HttpResponse('Reservation confirmed! See you at the table')
     else:
         booking_form = BookATableForm()
