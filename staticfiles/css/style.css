@@ -1,7 +1,9 @@
 body {
+    margin: auto;
     background-color: rgb(255,236,236);
     font-family: 'Roboto', sans-serif;
 }
+
 
 /*Navigation bar*/
 
@@ -25,6 +27,8 @@ nav {
     display: flex;
 }
 
+/*Header*/
+
 .header {
     height: 50vh;
     background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
@@ -40,6 +44,8 @@ nav {
     background-color: rgba(255,236,236,0.8);
     padding: 20px 40px;
 }
+
+/*Headlines and images*/
 
 h1 {
     font-family: 'Courgette', cursive;
@@ -76,11 +82,41 @@ h3, h4 {
     justify-content: center;
 }
 
-footer {
+
+/*Footer*/
+
+footer .d-flex {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    text-align: center;
     margin: auto;
 }
+
+footer h6, .navbar-brand {
+    margin: 10px auto;
+}
+
+footer .btn {
+    margin: 10px;
+}
+
+footer ul.nav-item {
+    list-style-type: none;
+    padding: 5px;
+    margin: auto;
+}
+
+
+/*Landing page*/
+.information {
+    text-align: justify;
+}
+
+.opening-hours, .opening-hours > h6 {
+    text-align: center;
+    margin: 10px;
+}
+
 
 /*Menu page*/
 .menu-header {
@@ -93,5 +129,3 @@ footer {
     position: relative;
     margin: auto;
 }
-
-

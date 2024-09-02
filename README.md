@@ -36,20 +36,23 @@
 
 ### User Stories
 
-An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves and the wont-have - all in line with ...
+An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with MoSCoW prioritazion method.
+
+I do think many of my User Stories should have been split into more detailed stories if this was a project that were to be used by a restaurant IRL. For example the "Contact restaurant" User Story could have been split up into stories about reading the contact info, creating the form fields, getting a respones and so on - but in this project I focused on the process of creating some Stories to draw out my process. 
 
 
-EPIC: Book a table
+__EPIC: Book a table__
 
-EPIC: Change or delete a reservation
+__EPIC: Manage reservations__
 
-EPIC: Contact the restaurant
+This section is to me where the User Stories as a site visitor vs site administrator differ the most. 
 
-EPIC: Locate the restaurant
+__EPIC: Contact the restaurant__
 
-EPIC: Look at the menu
+__EPIC: Locate the restaurant__
 
-EPIC: Handle bookings(administrator)
+__EPIC: View the menu__
+
 
 
 
@@ -88,13 +91,13 @@ As I love working on the design of a web page it's easy to put way to much time 
 
 - MoSCoW Prioritization - The User Stories are labeled with one of the following three categories, all according to the MoSCow prioritization methodology:
 
-Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority.
+  - Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority.
 
-Should Have: Important features that should be included if possible, but they are not critical for the website to function.
+  - Should Have: Important features that should be included if possible, but they are not critical for the website to function.
 
-Could Have: Desirable features that can be added if there is enough time and resources.
+  - Could Have: Desirable features that can be added if there is enough time and resources.
 
-Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
+  - Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
 
 
 ### Database Design
@@ -152,7 +155,7 @@ In line with a user friedly interface the user gets an immediate respons valiada
 
 ### Book a table page
 
-On the page called "Book a table" the user has the option to fill out a form to make a reservation at the restaurant, without having to contact them via email or phone. All with the goal of making it as simple for the user as possible to make the decision to visit the restaurant. 
+On the page called "Book a table" the user has the option to fill out a form to make a reservation request at the restaurant, without having to contact them via email or phone. All with the goal of making it as simple for the user as possible to make the decision to visit the restaurant. 
 
 ![printscreen book a tabel form]()
 
@@ -167,6 +170,7 @@ On the page called "Book a table" the user has the option to fill out a form to 
 ### Footer
 
 
+
 ![printscreen]()
 
 ### Potential future features
@@ -175,20 +179,19 @@ On the page called "Book a table" the user has the option to fill out a form to 
 ## Technologies
 
 __Stack__
-HTML5
-CSS3
-JavaScript
-Python
+- HTML5
+- CSS3
+- JavaScript
+- Python
 
 __Frameworks__
 Django
 
 __Libraries & Additional Programs/Software/Tools__
 - Bootstrap -
-CI Database URL
-Django All Auth
-
-Gunicorn
+- CI Database URL
+- Django All Auth
+- Gunicorn
 
 
 ## Manual testing
