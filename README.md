@@ -1,35 +1,47 @@
+# Restaurant Sakura 
+
+Restaurant Sakura is a fine dining restaurant focusing on the south east asian cuisine. On the webpage the site users can make a reservation at the restaurant, view the menu, get in contact with the restaurant and pretty much find all the information they need about this specific restaurant - including how to find it. It is a Full Stack website build with the help of the Django framework and offers the users full CRUD functionality to create, read/view, update and delete their reservation at the restaurant.
+
+The live website can be seen [here](LÄNK)
+
 ## Table of content
-- UX/UI Design
-  - User Stories
-  - Wireframes
-  - Project Planning 
-    - Agile methologies
-  - Database design
-- Features
-  - Header
-  - Navigation menu
-  - Landing page
-  - Location page
-  - Contact page
-  - Book a table page
-  - Register account/login page
-  - Footer
-  - Potential future features
-- Technologies
-- Manual Testing
-  - Responsivness
-  - Browser compability
-  - Validator testing
-  - User Story testing
-  - Bugs
-- Deployment
-  - Forking
-  - Cloning
-  - Deployment to GitHub
-  - Deployment to Heroku
-- References/credit
-  - Content
-  - Media
+- [UX/UI Design](#uxui-design)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+  - [Colour scheme](#colour-scheme)
+  - [Project Planning](#project-planning)
+    - [Agile methodologies](#agile-methodologies)
+    - [Database design](#database-design)
+- [Features](#features)
+  - [Existing features](#existing-features)
+  - [Header](#header)
+  - [Navigation menu](#navigation-menu)
+  - [Landing page](#landing-page)
+  - [Location page](#location-page)
+  - [Contact page](#contact-page)
+  - [Book a table page](#book-a-table-page)
+  - [Register account/login page](#register-accountlogin-page)
+  - [Footer](#footer)
+  - [Potential future features](#potential-future-features)
+- [Technologies used](#technologies-used)
+  - [Languages](#languages)
+  - [Database](#database)
+  - [Frameworks](#frameworks)
+  - [Libraries & Additional Programs/Software/Tools](#libraries--additional-programssoftwaretools)
+- [Manual Testing](#manual-testing)
+  - [Responsivness](#responsivness)
+  - [Browser compability](#browser-compability)
+  - [Validator testing](#validator-testing)
+  - [User Story testing](#user-story-testing)
+  - [Bugs](#bugs)
+- [Deployment](#deployment)
+  - [Forking](#forking)
+  - [Cloning](#cloning)
+  - [Deployment to GitHub](#deployment-to-github)
+  - [Deployment to Heroku](#deployment-to-heroku)
+- [References/credit](#referencescredit)
+  - [Content](#content)
+  - [Media](#media)
 
 
 ## UX/UI Design
@@ -78,10 +90,14 @@ Here you can view the same Contact page, but designed for a web browser instead.
 
 There were 13 wireframes made in total, which can all be found [here](/wireframes/)
 
+### Colour scheme
+
+
+
 
 ### Project planning
 
-__Agile methodologies__
+### Agile methodologies
 
 - Kanban board - I used the Project Board in Github for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with some tasks, to clarify for myself what each User Story demanded of me. Some USer Stories were written in different ways in the first stage, but only one of them made it to the Project board. 
 
@@ -101,6 +117,8 @@ As I love working on the design of a web page it's easy to put way to much time 
 
 
 ### Database Design
+
+Entity Relationship Diagrams (ERD)
 
 
 ## Features
@@ -176,22 +194,40 @@ On the page called "Book a table" the user has the option to fill out a form to 
 ### Potential future features
 
 
-## Technologies
+## Technologies used
 
-__Stack__
+### Languages
 - HTML5
 - CSS3
 - JavaScript
 - Python
 
-__Frameworks__
-Django
+### Database
+- CI Database URL - used to store all data
+Postgres
 
-__Libraries & Additional Programs/Software/Tools__
-- Bootstrap -
-- CI Database URL
-- Django All Auth
-- Gunicorn
+### Frameworks
+Django - main framework for a secure and resuable development process
+
+### Libraries & Additional Programs/Software/Tools
+- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet. 
+- Balsamique - used to create all wireframes for the project
+- Cloudinary - 
+- Django All Auth - used for user registration and authentication
+- Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look.
+- Django Summernote - used as the editor for the Admin panel
+- Favicon - used for finding a tab icon, which also became part of the logo for the restaruant project
+- Font Awesome - used for social media icons 
+- GitHub - used to store all the code and the Projects Kanban board
+- GitPod - used as the IDE during development
+- Google Fonts - used for custom fonts on the entire page
+- Gunicorn - used as the server to run Python code/Django on Heroku platform
+- Heroku - used as the platform to deploy the project
+- Lucidchart - used to create the Entity Relationship Diagrams, also known as ERD
+- Pexels - used to find suiting images for all pages of the site
+- Psycopg - 
+- Whitenoice - used to handle the static files for deployment
+
 
 
 ## Manual testing
@@ -199,9 +235,11 @@ __Libraries & Additional Programs/Software/Tools__
 
 ### Responsivness 
 
+Mainly thanks to Bootstrap the page is responsive on all devices, from mobile phones to tablets, laptops and larger screens. It reaches a max-width on larger devices as to not look to stretched out. 
 
 ### Browser compability
 
+The project has been tested on different browsers, such as: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. It looks and functions pretty much the same on all browsers. 
 
 ### Validator testing
 
@@ -227,6 +265,8 @@ When testing the accessibility using Lighthouse for Chrome,
 
 
 ### User Story testing
+
+
 
 
 ### Bugs
