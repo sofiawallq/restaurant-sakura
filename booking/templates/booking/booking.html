@@ -4,36 +4,36 @@
 
 {% block booking %}
 
-<body>
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
-            <h2>Make a reservation</h2>
-            <p>Fill out the form below:</p>
+            <h2>Make a reservation request</h2>
+            <p>Fill out the form below and we will confirm your reservation via email:</p>
 
             <!--Contact form-->
             <form method="post">
                 {% csrf_token %}
-                {{ booking_form.media }} 
+                {{ booking_form.media }}
                 {{ booking_form | crispy }}
                 <button class="btn btn-secondary" type="submit">Make reservation</button>
             </form>
         </div>
     </div>
-    
-    <!-- DateTimePicker script -->
-    <script>
-        $(document).ready(function() {
-            $('#id_date').datetimepicker({
-                format: 'YYYY-MM-DD',
-                useCurrent: false
-            });
-            $('#id_time').datetimepicker({
-                format: 'HH:mm',
-                useCurrent: false
-            });
+</div>
+
+<!-- DateTimePicker script -->
+<script>
+    $(document).ready(function () {
+        $('#id_date').datetimepicker({
+            format: 'YYYY-MM-DD',
+            useCurrent: false
         });
-    </script>
-</body>
+        $('#id_time').datetimepicker({
+            format: 'HH:mm',
+            useCurrent: false
+        });
+    });
+</script>
 
 
 {% endblock booking %}
