@@ -4,13 +4,14 @@
 
 {% block booking %}
 
+<!-- Book a table headline -->
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-6 my-5">
             <h2>Make a reservation request</h2>
             <p>Fill out the form below and we will confirm your reservation via email:</p>
 
-            <!--Contact form-->
+            <!-- Book a table form -->
             <form method="post">
                 {% csrf_token %}
                 {{ booking_form.media }}
