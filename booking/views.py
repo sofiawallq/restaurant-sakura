@@ -36,7 +36,6 @@ def booking_confirmation(request):
 @login_required
 def booking_list(request):
     bookings = BookATable.objects.filter(user=request.user)
-    print(bookings)
     return render(request, 'booking/booking_list.html', {'bookings': bookings}) 
 
 
