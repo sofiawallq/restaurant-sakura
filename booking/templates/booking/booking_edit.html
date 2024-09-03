@@ -3,11 +3,14 @@
 
 {% block booking_edit %}
 
-<h1>{% if form.instance.id %}Edit{% else %}New{% endif %} Reservation</h1>
+<h1>Edit Reservation</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="btn btn-secondary" type="submit">Save</button>
+    <button class="btn btn-secondary" type="submit">Save changes</button>
 </form>
+<a href="{% url 'booking_list' %}" class="btn btn-secondary">Cancel</a>
 
 {% endblock booking_edit %}
+
+</form>

@@ -40,21 +40,26 @@ def booking_list(request):
 
 
 @login_required
-def booking_edit(request, booking_id=None):
-    if booking_id:
-        booking = get_object_or_404(BookATable, id=booking_id, user=request.user)
-    else:
-        booking = None
-
+def booking_edit(request, booking_id):
+    booking = get_object_or_404(BookATable, id=booking_id)
     if request.method == "POST":
         form = BookATableForm(request.POST, instance=booking)
         if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user = request.user  #Connect logged in user to reservation
-            booking.save()
-            messages.add_message(request, messages.SUCCESS, "Reservation request updated successfully!")
+            form.save()
+            messages.success(request, "Reservation request updated successfully!")
             return redirect('booking_list')
+        else: message.error(request, "There was an error with updating your reservation")    
     else:
         form = BookATableForm(instance=booking)
 
-    return render(request, 'booking/booking_edit.html', {'form': form})  
+    return render(request, 'booking/booking_edit.html', {'form': form, 'booking': booking})  
+        
+
+def booking_delete(request, booking_id):
+    booking = get_object_or_404(BookATable, id=booking_id)
+    if request.method == "POST":
+        booking.delete()
+        messages.success(request, "Reservation deleted successfully")
+        return redirect('booking_list')
+    
+    return render(request, 'booking/booking_delete.html', {'booking': booking})    
