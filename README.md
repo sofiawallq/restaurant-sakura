@@ -73,21 +73,21 @@ Wireframes for both the mobile design and larger devices such as tablets and com
 
 The first example shows the landing page viewed in a browser on a computer or larger tablet - featuring the navigation bar with all its content visible, the header image/jumbotron and the two most important buttons to focus on.
 
-![printscreen](/wireframes/Main%20landing%20page.png)
+![printscreen](/static/images/wireframes/main_landing_page.png)
 
 Below is a wireframe for the landing page on a computer or larger tablet when the visitor scrolls down a bit, it shows a feature with an image gallery that would be a nice feature, but unfortunately it did not make it into the project at this point due to other parts with higher priority. 
 
-![printscreen](/wireframes/Third%20view%20landing%20page.png)
+![printscreen](/static/images/wireframes/third_view_landing_page.png)
 
 Next up are some of the wireframes for the mobile view, I wanted the main view on mobile screens to be quite simple and straight forward. A drop down menu instead of a navigation bar to save som space, and focus on the jumbotron plus booking and menues. Below is also an example of one of the projects other pages in mobile view - the Contact page where site visitors can find all of the information the need to get in contact with the restaurant, or fill out a form if they wish.
 
-![printscreen](/wireframes/Mobile%20landing%20first%20view.png)![printscreen](/wireframes/Mobile%20Contact%20page.png)
+![printscreen](/static/images/wireframes/mobile_landing_first_view.png)![printscreen](/static/images/wireframes/mobile_contact_page.png)
 
 Here you can view the same Contact page, but designed for a web browser instead. Here Bootstraps grid system came in really handy to simplify the process of making every page responsive for all screen sizes.
 
-![printscreen](/wireframes/Contact%20page.png)
+![printscreen](/static/images/wireframes/mobile_contact_page.png)
 
-There were 13 wireframes made in total, which can all be found [here](/wireframes/)
+There were 13 wireframes made in total, which can all be found [here](/static/images/wireframes/)
 
 ### Colour scheme
 
@@ -119,6 +119,10 @@ As I love working on the design of a web page it's easy to put way to much time 
 
 Entity Relationship Diagrams (ERD)
 
+![printscreen entity relationship diagram](/static/images/erd_diagram.png)
+
+
+A User can make many bookings so the relationship between User and BookATable is one-to-many, many lines in the USer model can be associated with the BookATable model, while one line in the BookATable model is associated with one exact line in the User model.
 
 ## Features
 
@@ -215,6 +219,7 @@ Django - main framework for a secure and resuable development process
 - Django All Auth - used for user registration and authentication
 - Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look.
 - Django Summernote - used as the editor for the Admin panel
+- dj-database-url - used to connect Django to database via URL
 - Favicon - used for finding a tab icon, which also became part of the logo for the restaruant project
 - Font Awesome - used for social media icons 
 - GitHub - used to store all the code and the Projects Kanban board
