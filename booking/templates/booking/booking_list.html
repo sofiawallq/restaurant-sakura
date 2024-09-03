@@ -7,41 +7,29 @@
     <div class="row">
         <div class="col-12 text-center">
             <h1>Your Reservations</h1>
-            <table class="table mt-4">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Number of People</th>
-                        <th>Edit/Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for booking in bookings %}
-                    <tr>
-                        <td>{{ booking.lastname }}</td>
-                        <td>{{ booking.email }}</td>
-                        <td>{{ booking.date }}</td>
-                        <td>{{ booking.time }}</td>
-                        <td>{{ booking.guests }}</td>
-                        <td>
-                            <button class="btn btn-outline-secondary btn-edit btn-sm"><a href="{% url 'booking_edit' booking.id %}">Edit</a></button>
-                            <button class="btn btn-outline-secondary btn-delete btn-sm"><a href="{% url 'booking_delete' booking.id %}">Delete</a></button>
-                        </td>
-                    </tr>
-                    {% empty %}
-                    <tr>
-                        <td colspan="5">No reservations found</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <button button class="btn btn-secondary align-item-center" type="button"><a href="{% url 'booking' %}">New Reservation</a></button>
+            <div class="reservation-list mt-4">
+                {% for booking in bookings %}
+                <div class="reservation-item">
+                    <div class="reservation-detail"><strong>Name:</strong> {{ booking.lastname }}</div>
+                    <div class="reservation-detail"><strong>Email:</strong> {{ booking.email }}</div>
+                    <div class="reservation-detail"><strong>Date:</strong> {{ booking.date }}</div>
+                    <div class="reservation-detail"><strong>Time:</strong> {{ booking.time }}</div>
+                    <div class="reservation-detail"><strong>Number of People:</strong> {{ booking.guests }}</div>
+                    <div class="reservation-detail">
+                        <button class="btn btn-outline-secondary btn-edit btn-sm"><a
+                                href="{% url 'booking_edit' booking.id %}">Edit</a></button>
+                        <button class="btn btn-outline-secondary btn-delete btn-sm"><a
+                                href="{% url 'booking_delete' booking.id %}">Delete</a></button>
+                    </div>
+                </div>
+                {% empty %}
+                <div>No reservations found</div>
+                {% endfor %}
+            </div>
+            <button button class="btn btn-secondary align-item-center" type="button"><a href="{% url 'booking' %}">New
+                    Reservation</a></button>
         </div>
     </div>
 </div>
-
 
 {% endblock view_booking %}
