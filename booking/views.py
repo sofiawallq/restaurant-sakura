@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect,  get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -12,7 +11,7 @@ def book_table(request):
         if booking_form.is_valid():
             booking_form.save()
             messages.add_message(request, messages.SUCCESS, "New guest reservation")
-            return HttpResponse('Reservation confirmed! See you at the table')
+            return render(request, 'booking_confirmation.html', {'booking_form': booking_form})
     else:
         booking_form = BookATableForm()
 

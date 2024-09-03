@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block booking confirmation %}
+
+<body>
+    <div class="container mt-5">
+        <!-- Bootstrap alert for success message -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        <h2>Thank you for your reservation!</h2>
+        <p>You will receive a reply on you email shortly!</p> 
+        <p>We look forward to seeing you at the table.</p>
+    </div>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+
+{% endblock booking confirmation %}
