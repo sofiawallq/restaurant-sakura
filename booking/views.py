@@ -11,7 +11,7 @@ def book_table(request):
         if booking_form.is_valid():
             booking_form.save()
             messages.add_message(request, messages.SUCCESS, "New guest reservation")
-            return render(request, 'booking_confirmation.html', {'booking_form': booking_form})
+            return render(request, 'booking/booking_confirmation.html', {'booking_form': booking_form})
     else:
         booking_form = BookATableForm()
 

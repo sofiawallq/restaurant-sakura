@@ -11,7 +11,7 @@ class BookATable(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     date = models.DateField()
     time = models.TimeField()
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1)], default=1)
