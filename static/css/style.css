@@ -159,6 +159,9 @@ footer ul.nav-item {
     border: none;
 }
 
+/*Booking and reservation list*/
+
+
 /*Styling for specific screen width*/
 @media (min-width: 768px) {
     .location.header {
