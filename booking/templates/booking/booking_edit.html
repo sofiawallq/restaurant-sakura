@@ -9,8 +9,6 @@
     {{ form.as_p }}
     <button class="btn btn-secondary" type="submit">Save changes</button>
 </form>
-<a href="{% url 'booking_list' %}" class="btn btn-secondary">Cancel</a>
+<button class="btn btn-secondary"><a href="{% url 'booking_list' %}">Cancel</a></button>
 
 {% endblock booking_edit %}
-
-</form>
