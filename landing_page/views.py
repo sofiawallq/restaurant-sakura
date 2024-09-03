@@ -3,7 +3,6 @@ from django.views import generic
 from django.contrib import messages
 from django.template import loader
 from django.http import HttpResponse
-from .models import Post
 
 
 # Create your views here.
