@@ -1,3 +1,4 @@
+/*General content*/
 body {
     margin: auto;
     background-color: rgb(255,236,236);
@@ -7,7 +8,6 @@ body {
 
 
 /*Navigation bar*/
-
 .navbar-brand {
     font-family: 'Courgette', cursive;
 }
@@ -28,8 +28,7 @@ nav {
     display: flex;
 }
 
-/*Header*/
-
+/*Header/jumbotron main page*/
 .header {
     height: 50vh;
     background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
@@ -47,7 +46,6 @@ nav {
 }
 
 /*Headlines and images*/
-
 h1 {
     font-family: 'Courgette', cursive;
     font-size: 2.5em;
@@ -68,7 +66,6 @@ h3, h4 {
 }
 
 /*Buttons*/
-
 .btn-secondary {
     width: 10em;
     margin: 10px;
@@ -85,7 +82,6 @@ h3, h4 {
 
 
 /*Footer*/
-
 footer .d-flex {
     display: flex;
     align-items: center;
@@ -108,7 +104,7 @@ footer ul.nav-item {
 }
 
 
-/*Landing page*/
+/*Landing page info section*/
 .information {
     text-align: justify;
 }
@@ -119,7 +115,7 @@ footer ul.nav-item {
 }
 
 
-/*Menu page*/
+/*Menues page*/
 .menu-header {
     height: 70vh;
     background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
@@ -130,6 +126,7 @@ footer ul.nav-item {
     position: relative;
     margin: auto;
 }
+
 
 /*Location page*/
 .location-header {
