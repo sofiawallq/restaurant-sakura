@@ -15,7 +15,7 @@ class BookATable(models.Model):
     date = models.DateField()
     time = models.TimeField()
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1)], default=1)
-    message = models.TextField()
+    message = models.TextField(blank=True, null=True)
     read = models.BooleanField(default=False)
 
     def __str__(self):

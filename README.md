@@ -318,8 +318,7 @@ The link to the mock terminal in Heroku can be found here:
 
 Inspiration for the food and drink menues I borrowed from two of my favourite restaurants here in Gothenburg, Sweden: [Toso](https://toso.nu/) and [Cheri-Lee](https://www.cheri-lee.se/).
 
-
-
+Datetime picker to work I turned to ChatGPT in the end since my Bootstrap one didn't work as intended
 
 ### Media
 

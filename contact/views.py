@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.contrib import messages
-from django.http import HttpResponse
 from .forms import ContactRestaurant
 
 # Create your views here.
@@ -12,7 +11,7 @@ def contact_restaurant(request):
         if contact_form.is_valid():
             contact_form.save()
             messages.add_message(request, messages.SUCCESS, "New message recieved.")
-            return HttpResponse("Message received! We will get back to you as soon as possible!")
+            return render(request, 'contact/contact_confirmation.html')
 
     return render(
         request, 

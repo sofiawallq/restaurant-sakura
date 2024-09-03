@@ -7,8 +7,8 @@ class BookATableForm(forms.ModelForm):
         model = BookATable
         fields = ['firstname', 'lastname', 'email', 'guests', 'date', 'time', 'message']         
         widgets = {
-            'date': DatePickerInput(options={"format": "YYYY-MM-DD", "placeholder": "Select date"}),
-            'time': TimePickerInput(options={"format": "HH:mm", "placeholder": "Select time"}),
+            'date': forms.DateInput(attrs={'class': 'form-control', 'id': 'date_picker'}),
+            'time': forms.TimeInput(attrs={'class': 'form-control', 'id': 'time_picker'}),
         }
 
              

@@ -10,6 +10,7 @@ body {
 /*Navigation bar*/
 .navbar-brand {
     font-family: 'Courgette', cursive;
+    margin-right: 10px;
 }
 
 nav {
@@ -89,7 +90,7 @@ footer .d-flex {
     margin: auto;
 }
 
-footer h6, .navbar-brand {
+footer h6 .navbar-brand {
     margin: 10px auto;
 }
 

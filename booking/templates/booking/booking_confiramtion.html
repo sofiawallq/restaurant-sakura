@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block booking confirmation %}
+{% block booking_confirmation %}
 
 <body>
     <div class="container mt-5">
@@ -14,13 +14,16 @@
                 </div>
             {% endfor %}
         {% endif %}
-        
-        <h2>Thank you for your reservation!</h2>
+        <div class="row">
+            <div class="col-12 text-center">
+        <h2>Thank you for your reservation request!</h2>
         <p>You will receive a reply on you email shortly!</p> 
         <p>We look forward to seeing you at the table.</p>
+            </div>
+        </div>    
     </div>
 
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 
-{% endblock booking confirmation %}
+{% endblock booking_confirmation %}

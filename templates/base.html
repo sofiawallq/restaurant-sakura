@@ -46,9 +46,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
 
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <!-- Custom CSS Stylesheet -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -178,13 +179,17 @@
         <!-- Booking content goes here -->
         {% endblock booking %}
 
-        {% block booking confirmation %}
+        {% block booking_confirmation %}
         <!-- Booking confirmation content goes here -->
-        {% endblock booking confirmation %}
+        {% endblock booking_confirmation %}
 
         {% block contact %}
         <!-- Contact content goes here -->
         {% endblock contact %}
+
+        {% block contact_confirmation %}
+        <!-- Contact confirmation content goes here -->
+        {% endblock contact_confirmation %}
 
         {% block menu %}
         <!-- Menu content goes here -->
@@ -243,10 +248,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <!-- Bootstrap Datetimepicker -->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js">
-    </script>
+    <!-- Flatpickr Datetimepicker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 </body>
 
