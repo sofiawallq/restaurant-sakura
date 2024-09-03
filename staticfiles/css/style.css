@@ -1,14 +1,16 @@
+/*General content*/
 body {
     margin: auto;
     background-color: rgb(255,236,236);
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 
 /*Navigation bar*/
-
 .navbar-brand {
     font-family: 'Courgette', cursive;
+    margin-right: 10px;
 }
 
 nav {
@@ -27,8 +29,7 @@ nav {
     display: flex;
 }
 
-/*Header*/
-
+/*Header/jumbotron main page*/
 .header {
     height: 50vh;
     background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
@@ -46,7 +47,6 @@ nav {
 }
 
 /*Headlines and images*/
-
 h1 {
     font-family: 'Courgette', cursive;
     font-size: 2.5em;
@@ -67,7 +67,6 @@ h3, h4 {
 }
 
 /*Buttons*/
-
 .btn-secondary {
     width: 10em;
     margin: 10px;
@@ -82,8 +81,20 @@ h3, h4 {
     justify-content: center;
 }
 
+.btn a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
 
 /*Footer*/
+footer {
+    margin-top: 2em;
+}
 
 footer .d-flex {
     display: flex;
@@ -92,7 +103,7 @@ footer .d-flex {
     margin: auto;
 }
 
-footer h6, .navbar-brand {
+footer h6 .navbar-brand {
     margin: 10px auto;
 }
 
@@ -107,7 +118,7 @@ footer ul.nav-item {
 }
 
 
-/*Landing page*/
+/*Landing page info section*/
 .information {
     text-align: justify;
 }
@@ -118,7 +129,7 @@ footer ul.nav-item {
 }
 
 
-/*Menu page*/
+/*Menues page*/
 .menu-header {
     height: 70vh;
     background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
@@ -128,4 +139,66 @@ footer ul.nav-item {
     justify-content: center;
     position: relative;
     margin: auto;
+}
+
+
+/*Location page*/
+.location-header {
+    height: 50vh;
+    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+.location-text {
+    background-color: rgba(255,236,236,0.8);
+    margin: auto;
+    padding: 1em;
+}
+
+.map {
+    height: 50vh;
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/*Booking and reservation list*/
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 40px;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-item:last-child {
+    border-bottom: none;
+}
+
+
+/*Styling for specific screen width*/
+@media (min-width: 768px) {
+    .location.header {
+        padding-right: 20px;
+    }
+    .map {
+        padding-left: 20px;
+    }
 }
