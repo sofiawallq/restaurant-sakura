@@ -92,6 +92,10 @@ h3, h4 {
 
 
 /*Footer*/
+footer {
+    margin-top: 2em;
+}
+
 footer .d-flex {
     display: flex;
     align-items: center;
@@ -169,6 +173,24 @@ footer ul.nav-item {
 }
 
 /*Booking and reservation list*/
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 40px;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-item:last-child {
+    border-bottom: none;
+}
 
 
 /*Styling for specific screen width*/

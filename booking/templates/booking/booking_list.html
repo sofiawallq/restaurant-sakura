@@ -5,22 +5,20 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-12 text-center mt-5">
             <h1>Your Reservations</h1>
-            <div class="reservation-list mt-4">
+            <div class="reservation-grid mt-4">
                 {% for booking in bookings %}
-                <div class="reservation-item">
-                    <div class="reservation-detail"><strong>Name:</strong> {{ booking.lastname }}</div>
-                    <div class="reservation-detail"><strong>Email:</strong> {{ booking.email }}</div>
-                    <div class="reservation-detail"><strong>Date:</strong> {{ booking.date }}</div>
-                    <div class="reservation-detail"><strong>Time:</strong> {{ booking.time }}</div>
-                    <div class="reservation-detail"><strong>Number of People:</strong> {{ booking.guests }}</div>
-                    <div class="reservation-detail">
-                        <button class="btn btn-outline-secondary btn-edit btn-sm"><a
-                                href="{% url 'booking_edit' booking.id %}">Edit</a></button>
-                        <button class="btn btn-outline-secondary btn-delete btn-sm"><a
-                                href="{% url 'booking_delete' booking.id %}">Delete</a></button>
-                    </div>
+                <div class="grid-item"><strong>Name:</strong> {{ booking.lastname }}</div>
+                <div class="grid-item"><strong>Email:</strong> {{ booking.email }}</div>
+                <div class="grid-item"><strong>Date:</strong> {{ booking.date }}</div>
+                <div class="grid-item"><strong>Time:</strong> {{ booking.time }}</div>
+                <div class="grid-item"><strong>Number of guests:</strong> {{ booking.guests }}</div>
+                <div class="col-12 text-center grid-item">
+                    <button class="btn btn-outline-secondary btn-edit btn-sm"><a
+                            href="{% url 'booking_edit' booking.id %}">Edit</a></button>
+                    <button class="btn btn-outline-secondary btn-delete btn-sm"><a
+                            href="{% url 'booking_delete' booking.id %}">Delete</a></button>
                 </div>
                 {% empty %}
                 <div>No reservations found</div>
