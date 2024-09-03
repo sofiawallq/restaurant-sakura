@@ -2,7 +2,7 @@
 
 Restaurant Sakura is a fine dining restaurant focusing on the south east asian cuisine. On the webpage the site users can make a reservation at the restaurant, view the menu, get in contact with the restaurant and pretty much find all the information they need about this specific restaurant - including how to find it. It is a Full Stack website build with the help of the Django framework and offers the users full CRUD functionality to create, read/view, update and delete their reservation at the restaurant.
 
-The live website can be seen [here](LÄNK)
+The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herokuapp.com/)
 
 ## Table of content
 - [UX/UI Design](#uxui-design)
@@ -85,7 +85,7 @@ Next up are some of the wireframes for the mobile view, I wanted the main view o
 
 Here you can view the same Contact page, but designed for a web browser instead. Here Bootstraps grid system came in really handy to simplify the process of making every page responsive for all screen sizes.
 
-![printscreen](/static/images/wireframes/mobile_contact_page.png)
+![printscreen](/static/images/wireframes/contact_page.png)
 
 There were 13 wireframes made in total, which can all be found [here](/static/images/wireframes/)
 
