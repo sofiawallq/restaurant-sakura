@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block booking_edit %}
 
-<h1>Edit Reservation</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-secondary" type="submit">Save changes</button>
-</form>
-<button class="btn btn-secondary"><a href="{% url 'booking_list' %}">Cancel</a></button>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Edit Reservation</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form|crispy }}
+                <button class="btn btn-secondary align-item-center" type="submit">Save changes</button>
+                <button class="btn btn-secondary align-item-center"><a href="{% url 'booking_list' %}">Cancel</a></button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock booking_edit %}
