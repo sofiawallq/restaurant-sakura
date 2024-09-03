@@ -124,6 +124,9 @@ Entity Relationship Diagrams (ERD)
 
 A User can make many bookings so the relationship between User and BookATable is one-to-many, many lines in the USer model can be associated with the BookATable model, while one line in the BookATable model is associated with one exact line in the User model.
 
+
+Model help from my mentor due
+
 ## Features
 
 
@@ -195,6 +198,12 @@ On the page called "Book a table" the user has the option to fill out a form to 
 ![printscreen]()
 
 ### Potential future features
+
+The project became bigger than my skills 
+
+a lot of functionality that needs to be added
+
+but see the value in the functions that are actually there
 
 
 ## Technologies used
