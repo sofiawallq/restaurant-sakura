@@ -15,10 +15,14 @@ def book_table(request):
             else:
                 booking.user = None
             booking.save()
-            messages.success(request, "Your reservation request has been submitted successfully.")
+            messages.success(
+                request, "Your reservation request has been"
+                "submitted successfully.")
             return redirect('booking/booking_confirmation')
         else:
-            messages.error(request, "There was an error with your reservation request. Please check the form and try again.")
+            messages.error(
+                request, "There was an error with your reservation request."
+                "Please check the form and try again.")
     else:
         booking_form = BookATableForm()
 
@@ -31,12 +35,12 @@ def book_table(request):
 
 def booking_confirmation(request):
     return render(request, 'booking/booking_confirmation.html')
-        
+
 
 @login_required
 def booking_list(request):
     bookings = BookATable.objects.filter(user=request.user)
-    return render(request, 'booking/booking_list.html', {'bookings': bookings}) 
+    return render(request, 'booking/booking_list.html', {'bookings': bookings})
 
 
 @login_required
@@ -46,14 +50,19 @@ def booking_edit(request, booking_id):
         form = BookATableForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(request, "Reservation request updated successfully!")
+            messages.success(
+                request, "Reservation request"
+                "updated successfully!")
             return redirect('booking_list')
-        else: message.error(request, "There was an error with updating your reservation")    
+        else:
+            message.error(
+                request, "There was an error with updating your reservation")
     else:
         form = BookATableForm(instance=booking)
 
-    return render(request, 'booking/booking_edit.html', {'form': form, 'booking': booking})  
-        
+    return render(request, 'booking/booking_edit.html', {
+            'form': form, 'booking': booking})
+
 
 def booking_delete(request, booking_id):
     booking = get_object_or_404(BookATable, id=booking_id)
@@ -61,5 +70,5 @@ def booking_delete(request, booking_id):
         booking.delete()
         messages.success(request, "Reservation deleted successfully")
         return redirect('booking_list')
-    
-    return render(request, 'booking/booking_delete.html', {'booking': booking})    
+
+    return render(request, 'booking/booking_delete.html', {'booking': booking})

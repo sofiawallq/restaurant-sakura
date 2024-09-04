@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.utils import timezone
 
+
 class BookingManager(models.Manager):
     def todays_bookings(self):
         return self.filter(date=timezone.now().date())
@@ -28,13 +29,15 @@ class BookATable(models.Model):
         ("20:00", "8 PM"),
     ]
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     email = models.EmailField()
     date = models.DateField()
     time = models.CharField(max_length=5, choices=TIMESLOT_CHOICES)
-    guests = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(8)], default=1)
+    guests = models.PositiveIntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(8)], default=1)
     message = models.TextField(blank=True, null=True)
     read = models.BooleanField(default=False)
 
@@ -63,7 +66,8 @@ class BookATable(models.Model):
             raise ValidationError("You cannot book a table in the past.")
 
         # Verify that bookings are fetched correctly
-        bookings_at_time = BookATable.objects.bookings_for_time(self.date, self.time)
+        bookings_at_time = BookATable.objects.bookings_for_time(
+            self.date, self.time)
 
         # Calculate total seats
         total_seats = sum(booking.guests for booking in bookings_at_time)
@@ -80,6 +84,7 @@ class BookATable(models.Model):
         verbose_name_plural = "Table Bookings"
         ordering = ['-date', '-time']
         constraints = [
-            models.UniqueConstraint(fields=['date', 'time', 'user'], name='unique_booking_per_user_per_time')
+            models.UniqueConstraint(
+                fields=['date', 'time', 'user'], name='unique_booking_per_user_per_time')
         ]
-         
+        

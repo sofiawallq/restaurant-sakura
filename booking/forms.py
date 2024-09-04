@@ -3,15 +3,22 @@ from django.core.exceptions import ValidationError
 from django.utils import timezone
 from .models import BookATable
 
+
 class BookATableForm(forms.ModelForm):
     class Meta:
         model = BookATable
-        fields = ['firstname', 'lastname', 'email', 'guests', 'date', 'time', 'message']
+        fields = [
+            'firstname', 'lastname', 'email', 'guests',
+            'date', 'time', 'message']
         widgets = {
-            'date': forms.DateInput(attrs={'class': 'form-control', 'id': 'date_picker', 'type': 'date'}),
-            'time': forms.Select(choices=BookATable.TIMESLOT_CHOICES, attrs={'class': 'form-control', 'id': 'time_picker'}),
-            'guests': forms.NumberInput(attrs={'class': 'form-control', 'min': '1', 'max': '8'}),
-            'message': forms.Textarea(attrs={'class': 'form-control', 'rows': 4}),
+            'date': forms.DateInput(attrs={
+                'class': 'form-control', 'id': 'date_picker', 'type': 'date'}),
+            'time': forms.Select(choices=BookATable.TIMESLOT_CHOICES, attrs={
+                'class': 'form-control', 'id': 'time_picker'}),
+            'guests': forms.NumberInput(attrs={
+                'class': 'form-control', 'min': '1', 'max': '8'}),
+            'message': forms.Textarea(attrs={
+                'class': 'form-control', 'rows': 4}),
         }
 
     def clean_date(self):
@@ -20,7 +27,8 @@ class BookATableForm(forms.ModelForm):
         if date < today:
             raise ValidationError("You cannot book a table in the past.")
         if date > today + timezone.timedelta(days=30):
-            raise ValidationError("You cannot book more than 30 days in advance.")
+            raise ValidationError(
+                "You cannot book more than 30 days in advance.")
         return date
 
     def clean_time(self):
@@ -43,6 +51,7 @@ class BookATableForm(forms.ModelForm):
             bookings_at_time = BookATable.objects.bookings_for_time(date, time)
             total_seats = sum(booking.guests for booking in bookings_at_time)
             if total_seats + guests > 100:
-                raise ValidationError("No available tables for this time slot.")
+                raise ValidationError(
+                    "No available tables for this time slot.")
 
         return cleaned_data
