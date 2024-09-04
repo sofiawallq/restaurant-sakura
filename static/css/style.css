@@ -1,11 +1,21 @@
 /*General content*/
 body {
-    margin: auto;
     background-color: rgb(255,236,236);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-12, .col-md-6 {
+    padding-left: 0; 
+    padding-right: 0; 
+}
 
 /*Navigation bar*/
 .navbar-brand {
@@ -31,7 +41,6 @@ nav {
 
 /*Header/jumbotron main page*/
 .header {
-    max-width: 95%;
     height: 60vh;
     background: url('/static/images/header_background_main_page_optimized.png') no-repeat center center;
     background-size: cover;
@@ -77,9 +86,23 @@ h3, h4 {
 }
 
 .book-btn, .menu-btn {
+    height: 5em;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.book-btn a.book-link, .menu-btn a.menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    margin: auto;
 }
 
 .btn a {
@@ -91,10 +114,8 @@ h3, h4 {
     text-align: center;
 }
 
-
 /*Menu section main page*/
 .menu {
-    max-width: 95%;
     height: 60vh;
     background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
     background-size: cover;
@@ -103,11 +124,13 @@ h3, h4 {
     justify-content: center;
     position: relative;
     margin: auto;
+    padding: 0;
 }
 
 /*Footer*/
 footer {
     margin-top: 2em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
@@ -209,14 +232,28 @@ footer ul.nav-item {
 
 
 /*Styling for specific screen width*/
-
-
-
-@media (min-width: 768px) {
-    .location.header {
-        padding-right: 20px;
+@media (max-width: 576px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
     }
-    .map {
-        padding-left: 20px;
+
+    .callout {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    .menu-header {
+        height: 50vh;
     }
 }
+
+@media (max-width: 768px) {
+    .callout {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+   

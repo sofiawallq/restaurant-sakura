@@ -30,7 +30,7 @@
       <p>"This restaurant lies in the heart of Gothenburg, right next to the magnificent Statue of Poseidon. The
         menu is inspired by the different food cultures of south east Asia and all dishes are made so that the food
         can be shared with your friends around the table.</p>
-      <div class="opening-hours">
+      <div class="opening-hours mt-5">
         <h4>Opening hours:</h4>
         <h6>Monday: Closed</h6>
         <h6>Tuesday - Friday: 5pm - 12am</h6>
@@ -45,15 +45,13 @@
 
 {% block booking %}
 
-<div class="container booking mt-3">
-  <div class="row">
-    <div class="col-sm-12 col-md-6 booking-image">
-      <img src="/static/images/dinner_plate.png" alt="image of dinner plate">
+<div class="container booking mt-5">
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-6 img-fluid booking-image">
+      <img src="/static/images/dinner_plate_main_page_optimized.png" alt="image of dinner plate">
     </div>
-    <div class="col-sm-12 col-md-6 book-btn">
-      <button type="button" class="btn btn-secondary btn-lg"><a
-          class="nav-link {% if request.path == booking_url %}active" aria-current="page{% endif %}"
-          href="{% url 'booking' %}">Book a table</a></button>
+    <div class="col-md-6 text-center align-items-center justify-content-center d-none d-md-flex">
+      <button type="button" class="btn btn-secondary btn-lg book-btn d-none d-md-block"><a class="book-link" href="{% url 'booking' %}">Book a table</a></button>
     </div>
   </div>
 </div>
@@ -62,17 +60,18 @@
 
 {% block contact %}
 
-<div class="container contact mt-3">
-  <div class="row">
+<div class="container contact mt-5 mt-md-2">
+  <div class="row align-items-center justify-content-center">
     <div class="col-sm-12 col-md-6 text-center">
       <h2>Contact us at:</h2>
       <h6>Mail: info@restaurantsakura.com</h6>
-      <h6>Phone number: +46 44 44 44</h6>
-      <h6>Or use our <a class="nav-link {% if request.path == contact_url %}active"
-        aria-current="page{% endif %}" href="{% url 'contact' %}">Contact form to send us a message"</a></h6>
+      <h6>Phone: +46 44 44 44</h6>
+      <h6>Or use our: <button type="button" class="btn btn-outline-secondary">
+        <a class="nav-link {% if request.path == contact_url %}active"
+        aria-current="page{% endif %}" href="{% url 'contact' %}">Contact form</button></a></h6>
     </div>
-    <div class="col-sm-12 col-md-6 contact-image">
-      <img src="/static/images/drinks.png" alt=" image of drinks">
+    <div class="col-sm-12 col-md-6 img-fluid contact-image text-md-right mt-5">
+      <img src="/static/images/drinks_main_page_optimized.png" alt=" image of drinks">
     </div>
   </div>
 </div>
@@ -82,11 +81,10 @@
 {% block menu %}
 
 <div class="container menu mt-5">
-  <div class="row">
-    <div class="col-12 menu-btn">
-      <button type="button" class="btn btn-secondary btn-lg"><a
-          class="nav-link {% if request.path == menues_url %}active" aria-current="page{% endif %}"
-          href="{% url 'menues' %}">View our menues</a></button>
+  <div class="row align-items-center justify-content-center">
+    <div class="col-12">
+      <button type="button" class="btn btn-secondary btn-lg menu-btn"><a
+          class="menu-link" href="{% url 'menues' %}">View our menues</a></button>
     </div>
   </div>
 </div>
