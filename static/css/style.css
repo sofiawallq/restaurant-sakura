@@ -114,19 +114,6 @@ h3, h4 {
     text-align: center;
 }
 
-/*Menu section main page*/
-.menu {
-    height: 60vh;
-    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding: 0;
-}
-
 /*Footer*/
 footer {
     margin-top: 2em;
@@ -155,8 +142,7 @@ footer ul.nav-item {
     margin: auto;
 }
 
-
-/*Landing page info section*/
+/*Landing page*/
 .information {
     text-align: justify;
 }
@@ -166,11 +152,22 @@ footer ul.nav-item {
     margin: 10px;
 }
 
+.menu {
+    height: 60vh;
+    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
 
 /*Menues page*/
 .menu-header {
     height: 70vh;
-    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -183,7 +180,7 @@ footer ul.nav-item {
 /*Location page*/
 .location-header {
     height: 50vh;
-    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -195,8 +192,7 @@ footer ul.nav-item {
 
 .location-text {
     background-color: rgba(255,236,236,0.8);
-    margin: auto;
-    padding: 1em;
+    padding: 0;
 }
 
 .map {
@@ -210,7 +206,7 @@ footer ul.nav-item {
     border: none;
 }
 
-/*Booking and reservation list*/
+/*Booking and reservation list page*/
 .reservation-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -256,4 +252,12 @@ footer ul.nav-item {
         max-width: 90%;
     }
 }
-   
+
+@media (min-width: 768px) {
+    .location.header {
+        padding-right: 20px;
+    }
+    .map {
+        padding-left: 20px;
+    }
+}   
