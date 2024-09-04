@@ -17,6 +17,7 @@ body {
     padding-right: 0; 
 }
 
+
 /*Navigation bar*/
 .navbar-brand {
     font-family: 'Courgette', cursive;
@@ -39,6 +40,7 @@ nav {
     display: flex;
 }
 
+
 /*Header/jumbotron main page*/
 .header {
     height: 60vh;
@@ -55,6 +57,7 @@ nav {
     background-color: rgba(255,236,236,0.8);
     padding: 20px 40px;
 }
+
 
 /*Headlines and images*/
 h1 {
@@ -75,6 +78,7 @@ h3, h4 {
     max-width: 100%;
     height: auto;
 }
+
 
 /*Buttons*/
 .btn-secondary {
@@ -114,6 +118,107 @@ h3, h4 {
     text-align: center;
 }
 
+
+/*Landing page*/
+.information {
+    text-align: justify;
+}
+
+.opening-hours, .opening-hours > h6 {
+    text-align: center;
+    margin: 10px;
+}
+
+.menu {
+    height: 60vh;
+    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+
+/*Menues page*/
+.menu-header {
+    height: 60vh;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Location page*/
+.location-header {
+    height: 60vh;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+.location-text, .contact-text {
+    background-color: rgba(255,236,236,0.8);
+    padding: 20px;
+}
+
+.map {
+    height: 60vh;
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/*Contact page*/
+.contact-background {
+    height: 40vh;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Booking and reservation list page*/
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 40px;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-item:last-child {
+    border-bottom: none;
+}
+
+
 /*Footer*/
 footer {
     margin-top: 2em;
@@ -140,90 +245,6 @@ footer ul.nav-item {
     list-style-type: none;
     padding: 5px;
     margin: auto;
-}
-
-/*Landing page*/
-.information {
-    text-align: justify;
-}
-
-.opening-hours, .opening-hours > h6 {
-    text-align: center;
-    margin: 10px;
-}
-
-.menu {
-    height: 60vh;
-    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding: 0;
-}
-
-/*Menues page*/
-.menu-header {
-    height: 70vh;
-    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-}
-
-
-/*Location page*/
-.location-header {
-    height: 50vh;
-    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding: 0;
-}
-
-.location-text {
-    background-color: rgba(255,236,236,0.8);
-    padding: 0;
-}
-
-.map {
-    height: 50vh;
-    padding: 0;
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/*Booking and reservation list page*/
-.reservation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 40px;
-    border: 1px solid #ddd;
-    padding: 40px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.grid-item {
-    padding: 0px;
-    border-bottom: 1px solid #ddd;
-}
-
-.grid-item:last-child {
-    border-bottom: none;
 }
 
 
