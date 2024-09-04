@@ -31,8 +31,9 @@ nav {
 
 /*Header/jumbotron main page*/
 .header {
-    height: 50vh;
-    background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
+    max-width: 95%;
+    height: 60vh;
+    background: url('/static/images/header_background_main_page_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -90,6 +91,19 @@ h3, h4 {
     text-align: center;
 }
 
+
+/*Menu section main page*/
+.menu {
+    max-width: 95%;
+    height: 60vh;
+    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
 
 /*Footer*/
 footer {
@@ -195,6 +209,9 @@ footer ul.nav-item {
 
 
 /*Styling for specific screen width*/
+
+
+
 @media (min-width: 768px) {
     .location.header {
         padding-right: 20px;

@@ -127,6 +127,10 @@ A User can make many bookings so the relationship between User and BookATable is
 
 Model help from my mentor due
 
+
+by running for example todays_bookings = BookATable.objects.todays_bookings()
+print(todays_bookings)     I can see todays booking in the terminal to ckech that the database is running as it should
+
 ## Features
 
 
@@ -184,6 +188,8 @@ On the page called "Book a table" the user has the option to fill out a form to 
 ![printscreen book a tabel form]()
 
 ![printscreen user respons from form]()
+
+There is a Timeslot function for visitors to choose from, validator functions and functions to prevent visitors from choosing dates back in time
 
 
 ### Register account/login page
