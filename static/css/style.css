@@ -145,7 +145,7 @@ h3, h4 {
 /*Menues page*/
 .menu-header {
     height: 60vh;
-    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background: url('/static/images/background_image_menu_page_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -218,6 +218,11 @@ h3, h4 {
     border-bottom: none;
 }
 
+
+/*Sign-up form*/
+#sign_up:ul {
+    text-decoration: none;
+}
 
 /*Footer*/
 footer {
