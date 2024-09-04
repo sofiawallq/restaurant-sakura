@@ -82,7 +82,4 @@ class BookATable(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['date', 'time', 'user'], name='unique_booking_per_user_per_time')
         ]
-
-
-todays_bookings = BookATable.objects.todays_bookings()
-print(todays_bookings)        
+         

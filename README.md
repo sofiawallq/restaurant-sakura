@@ -129,7 +129,7 @@ Model help from my mentor due
 
 
 by running for example todays_bookings = BookATable.objects.todays_bookings()
-print(todays_bookings)     I can see todays booking in the terminal to ckech that the database is running as it should
+print(todays_bookings)  I can see todays booking in the terminal to ckech that the database is running as it should
 
 ## Features
 
@@ -140,6 +140,8 @@ print(todays_bookings)     I can see todays booking in the terminal to ckech tha
 ### Header
 
 The main page is primarily made up of a header image/jumbotron with the restaurants name, a short tagline below to give the site visitor a quick understanding of what the place is all about, and two buttons leading the site visitor to either Book a table, or give them the possibility to view the menues - two features which to me are the primary functions on a restaurant web page. 
+
+Info section
 
 ![printscreen]()
 

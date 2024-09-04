@@ -1,9 +1,20 @@
 /*General content*/
 body {
-    margin: auto;
     background-color: rgb(255,236,236);
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-12, .col-md-6 {
+    padding-left: 0; 
+    padding-right: 0; 
 }
 
 
@@ -29,10 +40,11 @@ nav {
     display: flex;
 }
 
+
 /*Header/jumbotron main page*/
 .header {
-    height: 50vh;
-    background: url('/static/images/pexels-quark-studio-1159039-3201921.jpg') no-repeat center center;
+    height: 60vh;
+    background: url('/static/images/header_background_main_page_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -45,6 +57,7 @@ nav {
     background-color: rgba(255,236,236,0.8);
     padding: 20px 40px;
 }
+
 
 /*Headlines and images*/
 h1 {
@@ -66,6 +79,7 @@ h3, h4 {
     height: auto;
 }
 
+
 /*Buttons*/
 .btn-secondary {
     width: 10em;
@@ -76,9 +90,23 @@ h3, h4 {
 }
 
 .book-btn, .menu-btn {
+    height: 5em;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.book-btn a.book-link, .menu-btn a.menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+    margin: auto;
 }
 
 .btn a {
@@ -91,9 +119,116 @@ h3, h4 {
 }
 
 
+/*Landing page*/
+.information {
+    text-align: justify;
+}
+
+.opening-hours, .opening-hours > h6 {
+    text-align: center;
+    margin: 10px;
+}
+
+.menu {
+    height: 60vh;
+    background: url('/static/images/menu_background_main_page_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+
+/*Menues page*/
+.menu-header {
+    height: 60vh;
+    background: url('/static/images/background_image_menu_page_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Location page*/
+.location-header {
+    height: 60vh;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+
+.location-text, .contact-text {
+    background-color: rgba(255,236,236,0.8);
+    padding: 20px;
+}
+
+.map {
+    height: 60vh;
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/*Contact page*/
+.contact-background {
+    height: 40vh;
+    background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Booking and reservation list page*/
+.reservation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 40px;
+    border: 1px solid #ddd;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid-item:last-child {
+    border-bottom: none;
+}
+
+
+/*Sign-up form*/
+#sign_up:ul {
+    text-decoration: none;
+}
+
 /*Footer*/
 footer {
     margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
 }
 
 footer .d-flex {
@@ -118,82 +253,32 @@ footer ul.nav-item {
 }
 
 
-/*Landing page info section*/
-.information {
-    text-align: justify;
-}
-
-.opening-hours, .opening-hours > h6 {
-    text-align: center;
-    margin: 10px;
-}
-
-
-/*Menues page*/
-.menu-header {
-    height: 70vh;
-    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-}
-
-
-/*Location page*/
-.location-header {
-    height: 50vh;
-    background: url('/static/images/pexels-suju-2099737.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: auto;
-    padding: 0;
-}
-
-.location-text {
-    background-color: rgba(255,236,236,0.8);
-    margin: auto;
-    padding: 1em;
-}
-
-.map {
-    height: 50vh;
-    padding: 0;
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-/*Booking and reservation list*/
-.reservation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 40px;
-    border: 1px solid #ddd;
-    padding: 40px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.grid-item {
-    padding: 0px;
-    border-bottom: 1px solid #ddd;
-}
-
-.grid-item:last-child {
-    border-bottom: none;
-}
-
-
 /*Styling for specific screen width*/
+@media (max-width: 576px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .callout {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    .menu-header {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .callout {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
 @media (min-width: 768px) {
     .location.header {
         padding-right: 20px;
@@ -201,4 +286,4 @@ footer ul.nav-item {
     .map {
         padding-left: 20px;
     }
-}
+}   
