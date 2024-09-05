@@ -6,19 +6,37 @@ from django.utils import timezone
 
 
 class BookingManager(models.Manager):
+    """
+    Custom manager for the BookATable model, providing methods for fetching bookings.
+    """
     def todays_bookings(self):
+        # Returns all bookings for the current date.
         return self.filter(date=timezone.now().date())
 
     def bookings_by_user(self, user):
+        # Returns all bookings made by specified user.
         return self.filter(user=user)
 
     def bookings_for_time(self, date, time):
+        #Return bookings made for a specific date and time slot.
         return self.filter(date=date, time=time)
 
 
 class BookATable(models.Model):
     """
-    Stores a single booking made by site visitor.
+    Model representing a table booking made by a site user.
+    Contains attributes for:
+        user (ForeignKey) - The user who made the booking (nullable).
+        firstname (CharField) - The first name of the person who booked.
+        lastname (CharField) - The last name of the person who booked.
+        email (EmailField) - The email address of the person who booked.
+        date (DateField) - The date of the booking.
+        time (CharField) - The time slot of the booking, chosen from 
+        pre-defined options.
+        guests (PositiveIntegerField) - The number of guests (1 to 8).
+        message (TextField) - An optional message from the person booking.
+        read (BooleanField) - Indicates whether the booking has been marked 
+        as read by admin.
     """
     TIMESLOT_CHOICES = [
         ("15:00", "3 PM"),
@@ -44,11 +62,17 @@ class BookATable(models.Model):
     objects = BookingManager()
 
     def __str__(self):
+        """
+        String repres. of the booking object. 
+        Returns a string indicating booking:s last name, date and time. 
+        """
         return f"Booking made by {self.lastname} on {self.date} at {self.time}"
 
     def clean(self):
         """
-        Custom validation logic for the booking model.
+        Validation logic for ensuring the booking is valid.
+        Raises ValidationError ff the booking date or time is in the past,
+        or if there are no available tables.
         """
         # Get current date and time
         now = timezone.now()
@@ -76,10 +100,18 @@ class BookATable(models.Model):
             raise ValidationError("No available tables for this time slot.")
 
     def save(self, *args, **kwargs):
+        """
+        Override save method to include custom validation.
+        """
         self.clean()  # Perform the validation check
         super().save(*args, **kwargs)
 
     class Meta:
+        """
+        Meta options for the BookATable model.
+        Attributes: verbose_name (str), verbose_name_plural (str),
+        ordering (list), constraints (list)
+        """
         verbose_name = "Table Booking"
         verbose_name_plural = "Table Bookings"
         ordering = ['-date', '-time']

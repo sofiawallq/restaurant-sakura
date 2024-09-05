@@ -288,9 +288,9 @@ In line with a user friedly interface the site user gets an immediate respons va
 
 ### Book a table page
 
-On the page called "Book a table" the user has the option to fill out a form to make a reservation at the restaurant, without having to contact the restaurant via email or phone. All with the goal of making it as simple for the site user as possible to make the excellent decision to visit the restaurant. 
+On the page called "Book a table" the user has the option to fill out a form to make a reservation at the restaurant, without having to contact the restaurant via email or phone. All with the goal of making it as simple for the site user as possible to make the excellent decision to visit the restaurant. The mobile version of the page looks and feels the same, but responsive to different devices of course.§
 
-The form contains a Timeslot function for the site users to choose from when making a reservation and validation functions that prevent users from picking a date back in time. There is also the option to add a message to the restaurant - all in line with the user story about being able to make special requests when making a reservation at the restaurant.
+The form contains a Timeslot function for the site users to choose from when making a reservation and validation functions that prevent users from picking a date back in time. There is also the option to add a message to the restaurant - all in line with the user story about being able to make special requests when making a reservation at the restaurant. 
 
 ![printscreen book a tabel form](/static/images/printscreen/booking_page.png)
 
@@ -302,6 +302,12 @@ The site user will get a direct respons on the webpage confirming a successful b
 ### Register account/sign in and view reservations page
 
 
+
+![printscreen]()
+
+![printscreen]()
+
+![printscreen]()
 
 ![printscreen]()
 
