@@ -174,25 +174,38 @@ As I love working on the design of a web page it's easy to put way to much time 
 
 Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) also got a wont'have label at this stage of the development - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
 
-[printscreen MoSCoW label prioritization]()
+![printscreen MoSCoW label prioritization]()
 
 
 ### Database Design
 
-Entity Relationship Diagrams (ERD)
+Looking in the rearview mirror I set out to design a project that was a little to big to handle for little ol me - every page on the site got its on app in the root directory, because I had an idea that every page would have features that demanded its own models, views and so on ... Turns out that pages on the site like menues, location and contact could have consisted of just plain html-files placed in the projects root templates folder accompanied by some custom css. On the other hand the project is prepped for a majority of functions and cool add-ons on every page in the future since they are all structured as apps. Below is the root directory of my project, with "sakura" being the projects name, and the "booking"-app unfolded to show the content of one of the apps that fulfilles its purpose as an app at the moment. 
+
+![printscreen root directory](/static/images/printscreen/root_directory.png)
+
+
+- Entity Relationship Diagrams(ERD)
+
+Two custom models were made for the project, one to handle the "Book a table" form in the booking-app, and one to handle the "Contact"-form in the contact-app. Below is the original ERD's that were drawn out before the models were made. The User model is handled by the Django Framework. The ERD shows that the User model has a one-to-many relationship with my custom BookATable model - a User can make many bookings and many fields in the User model can be associated with the BookATable model, while only one field in the BookATable model is associated with one exact line in the User model.
 
 ![printscreen entity relationship diagram](/static/images/erd_diagram.png)
 
-ERD has been updated with a field for subject in COntact model, and changed the timefield to a charfield to apply timeslots
 
-A User can make many bookings so the relationship between User and BookATable is one-to-many, many lines in the USer model can be associated with the BookATable model, while one line in the BookATable model is associated with one exact line in the User model.
-
-
-Model help from my mentor due
+I ended up making some adjustments to both my custom models later on in the development, some time after the ERD's were made. the ContactRestaurant model has been updated with a CharField for "Subject", for easier administration of the incoming questions from user. The BookATable got a CharField to be able to handle timeslots - instead of a TimeField(courtesy of my mentor).
 
 
-by running for example todays_bookings = BookATable.objects.todays_bookings()
-print(todays_bookings)  I can see todays booking in the terminal to ckech that the database is running as it should
+![printscreen bookatable model](/static/images/printscreen/bookatable_model.png) ![printscreen contactrestaurant model](/static/images/printscreen/contact_restaurant_model.png)
+
+
+My BookATable model got some extra features to deal with form valiation that I would not have sorted out without the help of my mentor Spencer Barriball. 
+
+![printscreen additional features bookatable model](/static/images/printscreen/additional_functions_bookatable_model.png)
+
+
+Spencer also supported me in creating a BookingManager that checks to se if the model does the trick in the database, besides from what I can see in the Django admin panel. I can run a command like the one below to be able to see all of todays booking in the terminal and make sure the database si running as it should:
+"todays_bookings = BookATable.objects.todays_bookings()
+print(todays_bookings)"
+
 
 ## Features
 
@@ -343,7 +356,7 @@ HTML - through the official W3C validator.
 
 CSS -  the official Jigsaw validator.
 
-![printscreen css validator]()
+![printscreen css validator](/static/images/printscreen/css_validation.png)
 
 JavaScript - the JavaScript check in JSHint came back 
 
@@ -353,7 +366,7 @@ Python - PEP8 Python Validator
 
 There were quite a few files to run throught the PEP8 validator, many of them with too long lines and some trailing whitespace, but all have been corrected and hopefully no errors remain. 
 
-![printscreen python validator]()
+![printscreen python validator](/static/images/printscreen/python_validator.png)
 
 When testing the accessibility using Lighthouse for Chrome,
 
