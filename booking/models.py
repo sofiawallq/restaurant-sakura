@@ -25,7 +25,7 @@ class BookingManager(models.Manager):
 class BookATable(models.Model):
     """
     Model representing a table booking made by a site user.
-    Contains attributes for:
+    Contains fields for:
         user (ForeignKey) - user who made the booking (nullable).
         firstname (CharField) - first name of the person who booked.
         lastname (CharField) - last name of the person who booked.
