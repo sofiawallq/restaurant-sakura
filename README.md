@@ -126,7 +126,7 @@ As a Site Admin I can moderate and respons to reviews so that all feedback is ha
 
 Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The apporach was quite a simple but straight forward design and almost every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. I really loved the process and even though I made some changes to some pages along the way, due to it not looking as I imagined when for example responsivness came into the picture - I kept all of the wireframes in its original state as a reference.
 
- Below are some examples:
+Below are some examples:
 
 The first example shows the landing page viewed in a browser on a computer or larger tablet - featuring the navigation bar with all its content visible, the header image/jumbotron and what I believe to be the two most important buttons on a restaurants webpage from a users perspective.
 
