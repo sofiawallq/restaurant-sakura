@@ -123,6 +123,7 @@ Entity Relationship Diagrams (ERD)
 
 ![printscreen entity relationship diagram](/static/images/erd_diagram.png)
 
+ERD has been updated with a field for subject in COntact model, and changed the timefield to a charfield to apply timeslots
 
 A User can make many bookings so the relationship between User and BookATable is one-to-many, many lines in the USer model can be associated with the BookATable model, while one line in the BookATable model is associated with one exact line in the User model.
 
