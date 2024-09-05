@@ -5,6 +5,19 @@ from .models import BookATable
 
 
 class BookATableForm(forms.ModelForm):
+    """
+    Form for creating and validating table bookings.
+    This form is based on the `BookATable` model and provides custom validation
+    for the booking date, time, and availability of seats.
+    Contains fields for:
+        firstname (str) - first name of the person making the booking.
+        lastname (str) - last name of the person making the booking.
+        email (EmailField) - email address of the person making the booking.
+        guests (int) - number of guests (between 1 and 8).
+        date (DateField) - date of the booking.
+        time (str) - time of the booking, chosen from predefined options.
+        message (str) - optional message from the person making the booking.
+    """
     class Meta:
         model = BookATable
         fields = [
@@ -22,6 +35,13 @@ class BookATableForm(forms.ModelForm):
         }
 
     def clean_date(self):
+        """
+        Validates the booking date.
+        Ensures that the booking date is not in the past and not more than
+        30 days in the future.
+        Raises ValidationError if the date is in the past or more 
+        than 30 days ahead.
+        """
         date = self.cleaned_data['date']
         today = timezone.now().date()
         if date < today:
@@ -32,6 +52,13 @@ class BookATableForm(forms.ModelForm):
         return date
 
     def clean_time(self):
+        """
+        Validate the booking time.
+        Ensures that the time selected is not in the past if the booking
+        is for the current day.
+        Raises ValidationError if the time is earlier 
+        than current time for todays bookings.
+        """
         date = self.cleaned_data.get('date')
         time = self.cleaned_data['time']
         now = timezone.now()
@@ -42,6 +69,12 @@ class BookATableForm(forms.ModelForm):
         return time
 
     def clean(self):
+        """
+        Performs full form validation, including checking seat availability.
+        Combines the date, time, and number of guests to check if there are available
+        seats for chosen time slot.
+        Raises ValidationError if there are no available seats.
+        """
         cleaned_data = super().clean()
         date = cleaned_data.get('date')
         time = cleaned_data.get('time')

@@ -26,16 +26,16 @@ class BookATable(models.Model):
     """
     Model representing a table booking made by a site user.
     Contains attributes for:
-        user (ForeignKey) - The user who made the booking (nullable).
-        firstname (CharField) - The first name of the person who booked.
-        lastname (CharField) - The last name of the person who booked.
-        email (EmailField) - The email address of the person who booked.
-        date (DateField) - The date of the booking.
-        time (CharField) - The time slot of the booking, chosen from 
+        user (ForeignKey) - user who made the booking (nullable).
+        firstname (CharField) - first name of the person who booked.
+        lastname (CharField) - last name of the person who booked.
+        email (EmailField) - email address of the person who booked.
+        date (DateField) - date of the booking.
+        time (CharField) - time slot of the booking, chosen from 
         pre-defined options.
-        guests (PositiveIntegerField) - The number of guests (1 to 8).
-        message (TextField) - An optional message from the person booking.
-        read (BooleanField) - Indicates whether the booking has been marked 
+        guests (PositiveIntegerField) - number of guests (1 to 8).
+        message (TextField) - optional message from the person booking.
+        read (BooleanField) - indicates whether the booking has been marked 
         as read by admin.
     """
     TIMESLOT_CHOICES = [
