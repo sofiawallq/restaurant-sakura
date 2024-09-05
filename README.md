@@ -50,6 +50,8 @@ The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herok
 
 An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
 
+I made like 15 or so user Stories before starting the coding process and realised that it was not neraly enogh to cover all functions when I was midway through the process, had to add quite a few and ended up remaiking my GitHub project because they didn't really hit the spot on Tasks and criterias either. So the next time I'll giuve the SUwer Stories a lot more focus before starting the building, as to not stress with them late in the project as I did now. 
+
 I do think many of my User Stories should have been split into more detailed stories if this was a project that were to be used by an actual existing restaurant. For example the "Contact restaurant" User Story could have been split up into stories about reading the contact info, creating the form fields, getting a respons and so on - but in this project I focused on the process of creating some Stories to draw out my main process.
 
 
@@ -299,8 +301,16 @@ When testing the accessibility using Lighthouse for Chrome,
 
 ### User Story testing
 
+Acceptance criterias regarding cancellation 
+The system prevents modifications or cancellations within a certain timeframe (e.g., 24 hours before the booking), if applicable.
 
+Unique booking numer for reference, reminder of booking
+boka bord för special event
+upptagent tidsslot
 
+The booking policy is included in the confirmation email sent to the visitor.
+
+mailto:link i contact, phonenumber clickable
 
 ### Bugs
 

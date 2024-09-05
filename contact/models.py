@@ -4,6 +4,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class ContactRestaurant(models.Model):
+    subject = models.CharField(max_length=200, blank=True)
     name = models.CharField(max_length=200)
     email = models.EmailField()
     message = models.TextField()
