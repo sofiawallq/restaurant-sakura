@@ -17,6 +17,11 @@ body {
     padding-right: 0; 
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /*Navigation bar*/
 .navbar-brand {
@@ -157,7 +162,7 @@ h3, h4 {
 
 /*Location page*/
 .location-header {
-    height: 60vh;
+    height: 50vh;
     background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -174,7 +179,7 @@ h3, h4 {
 }
 
 .map {
-    height: 60vh;
+    height: 50vh;
     padding: 0;
 }
 
@@ -187,7 +192,7 @@ h3, h4 {
 
 /*Contact page*/
 .contact-background {
-    height: 40vh;
+    height: 50vh;
     background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;

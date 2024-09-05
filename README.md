@@ -46,38 +46,93 @@ The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herok
 
 ## UX/UI Design
 
+I went for a quite clean design on the webpage itself - a minimal colour scheme to let the images and functions do the talking, and to give a airy feel - quite like I imagine the restaurant itself feels when you visit it! I set out with really high ambitions when it came to designing nice looking menues, responsive modals and beautiful forms to fill out - all with the help of a perfect Bootstrap grid system. Some things I managed to do - the design and visual effects on menues and modals that I imagined jsut didn't cut it into the short window of time I had for the project. The main focus was to add functionality to the different pages and make sure that the CRUD-functionality for reservations work, that the authentication part works as it should and tht everything connects to the back-end and updates the Django Admin panel the way it should. To summarise - there si so much more I want to do with this webpage! But my ambition was a wee bit to high and the time a wee bit to short, as my mentor pointed out to me a couple of times. 
+
+
 ### User Stories
 
-An agile approach was used to initialize the project, with Epics to draw out the structure for the user stories a give me as a developer the bigger picture of the project. After the user stories and epics were finished they were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
+An agile approach was used to initialize the project - with Epics to draw out the structure for the user stories that needed to be written, and mainly to give me the bigger picture of the project. After the epics were set and the first round of user stories had been written, all the user stories were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
 
-I made like 15 or so user Stories before starting the coding process and realised that it was not neraly enogh to cover all functions when I was midway through the process, had to add quite a few and ended up remaiking my GitHub project because they didn't really hit the spot on Tasks and criterias either. So the next time I'll giuve the SUwer Stories a lot more focus before starting the building, as to not stress with them late in the project as I did now. 
+When it was time to start building the project and write all the code I had about 15 User Stories to work with. Somewhere half way through the project I realised that there was not nearly enough of them to cover all the parts of the project , and even more so I came to the conclusion that I had not put enough effort into the Acceptance Criterias and Tasks belonging to each User Story to accually simplify the work process ... Lesson learned I went back to my User Story Kanban board and pretty much started from scratch - some stories were updated and a lot more were added. I put the effort in the second time and got User Stories that really helped me in the coding process and gave me a lot of testing tools to validate teh functions on the webpage. As you can imagine this process  took a lot of time that I didn't really have that far into the project - so I learned the lesson the hard way to really take the time at the beginning of the project. But it also meant that I am really comfortable with the process of writing User Stories now, whick hopefully will help me in my next project. 
 
-I do think many of my User Stories should have been split into more detailed stories if this was a project that were to be used by an actual existing restaurant. For example the "Contact restaurant" User Story could have been split up into stories about reading the contact info, creating the form fields, getting a respons and so on - but in this project I focused on the process of creating some Stories to draw out my main process.
+I ended up with a total of 24 User Stories to work with in the end, the majority o them made it into the "Done" coloumn on my Project Board, while some simply didn't make it into the project at this point due to the short amount of time at my disposal. Those stories will on the other hand be great to use if I want to continue work on the project and create a really good portfolio piece for the future. 
+
+I do belienve some of the stories could have been split up into even smaller parts and tasks, but if I were t do that the process would be even longer - so hopefully they are enough to give a general feel for the project and its purpose for the users. There are also a lot of Stories regarding the Admin that could have been drawn out, but since my project doesn't focus on operation and andministration of an actual restaurants webpage but at this point mainly focus on the User and their interaction with the back-end and front-end of the website - I leave those stories for the future.  
+
+Below are the epics and the Stories I ended up with. If they made it all the way or need more work I will discuss further down in the [User Story testing](#user-story-testing) section. 
 
 
 __EPIC: Book a table__
 
-__EPIC: Manage reservations__
+- As a __Site User__ I can book a table at the restaurant online so that I can easily reserve a table at a time that it fits me.
 
-This section is to me where the User Stories as a site visitor vs site administrator differ the most. 
+- As a __Site User__ I want the booking process to be as simple as possible so that I can make a reservation and be at ease in the process while doing it.
+
+- As a __Site User__ I can specify special requests or needs when making my booking so that the restaurant can accommodate me.
+
+- As a __Site User__ I can receive an email confirmation of my reservation so that I can find the information about my reservation later.
+
+- As a __Site User__ I can view the restaurants booking policy before completing the form so that I know what to expect before I book a table.
+
+- As a __Site Admin__ I can view all bookings for the day/week/month online so that I can make sure we don't overbook and are capable of giving the customers excellent service.
+
+
+__EPIC: Manage reservations__
+ 
+- As a __Site User__ I can register an account so that I can view a list of my reservations and modify my reservations online.
+
+- As a __Site User__ I can login to my account from any device so that I can view, edit or delete my reservation.
+
+- As a __Site User__ I can edit or cancel my reservation online so that I can adjust my booking if my plans change.
+
+- As a __Site User__ I can delete my own reservation online so that I don't have to contact the restaurant via phone or email to do so.
+
+- As a __Site Admin__ I can view the total number of already booked seats at a given time/date so that we can prevent overbooking the restaurant.
+
 
 __EPIC: Contact the restaurant__
 
+As a __Site User__ I can easily find the restaurants contact information so that I can contact them if I have any questions or requests.
+
+As a __Site User__ I can find the restaurants opening hours so that I know when I can contact them with possible questions or inquiries.
+
+As a __Site User__ I can fill out a contact form so that I can send inquiries without having to call the restaurant or send a separate email.
+
+As a __Site Admin__ I can view all incoming messages from the Contact form so that I can respond to the user.
+
+
 __EPIC: Locate the restaurant__
+
+As a Site User I can find information about the restaurants psycial location so that I can find my way there.
+
+As a Site User I can view a map of the restaurants location so that I can navigater there by car, public transport or on foot.
 
 __EPIC: View the menu__
 
+As a Site User I can view the restaurants menu so that I can decide if this is a restaurant for me.
+
+As a Site Admin I can easily update the menues ans prices so that the customers always have the latest info about what's avaliable at the restaurant.
+
+__EPIC: Reviews__
+
+As a Site User I can write a review of the restaurant so that other people will know if the restaurant is worth a visit.
+
+As a Site User I can read reviews from earlier customers so that I can get a feeling for the restaurants food and quality.
+
+As a Site Admin I can moderate and respons to reviews so that all feedback is handled in the right way.
 
 
 ### Wireframes
 
-Wireframes for both the mobile design and larger devices such as tablets and computers were made using Balsamique(LÄNK). The apporach was quite a simple but straight forward design and every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. Below are some examples:
+Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The apporach was quite a simple but straight forward design and almost every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. I really loved the process and even though I made some changes to some pages along the way, due to it not looking as I imagined when for example responsivness came into the picture - I kept all of the wireframes in its original state as a reference.
 
-The first example shows the landing page viewed in a browser on a computer or larger tablet - featuring the navigation bar with all its content visible, the header image/jumbotron and the two most important buttons to focus on.
+ Below are some examples:
+
+The first example shows the landing page viewed in a browser on a computer or larger tablet - featuring the navigation bar with all its content visible, the header image/jumbotron and what I believe to be the two most important buttons on a restaurants webpage from a users perspective.
 
 ![printscreen](/static/images/wireframes/main_landing_page.png)
 
-Below is a wireframe for the landing page on a computer or larger tablet when the visitor scrolls down a bit, it shows a feature with an image gallery that would be a nice feature, but unfortunately it did not make it into the project at this point due to other parts with higher priority. 
+Below is a wireframe for the landing page on a computer or larger tablet when the visitor scrolls down a bit, it shows a feature with an image gallery that would be a nice feature, but unfortunately it did not make it into the project at this point due to other functions with a higher priority that needed to be in place first. 
 
 ![printscreen](/static/images/wireframes/third_view_landing_page.png)
 
@@ -312,6 +367,16 @@ upptagent tidsslot
 The booking policy is included in the confirmation email sent to the visitor.
 
 mailto:link i contact, phonenumber clickable
+
+Special hours (e.g., holidays or special events) can be displayed and updated easily by the administrator.
+
+
+ - Create an interface for administrators to update the hours without needing to modify code.
+
+ interface for adminstrating bookings - here is were the user stories cannot be teested since such functions are above my ... great functions to build in the future if
+ but for now the goal was to focus on an crud function for the user and authentication functions
+
+ recover password
 
 ### Bugs
 
