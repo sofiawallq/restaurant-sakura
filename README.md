@@ -140,36 +140,41 @@ Next up are some of the wireframes for the mobile view, I wanted the main view o
 
 ![printscreen](/static/images/wireframes/mobile_landing_first_view.png)![printscreen](/static/images/wireframes/mobile_contact_page.png)
 
-Here you can view the same Contact page, but designed for a web browser instead. Here Bootstraps grid system came in really handy to simplify the process of making every page responsive for all screen sizes.
+Here you can view the same Contact page, but designed for a web browser instead. Here Bootstraps grid system came in really handy to simplify the process of making every page responsive for all screen sizes. Although the Contact page was one of the pages that changed its look during the coding process due to a better visual solution, but here is the original idea. 
 
 ![printscreen](/static/images/wireframes/contact_page.png)
 
-There were 13 wireframes made in total, which can all be found [here](/static/images/wireframes/)
+There were 13 wireframes made in total, which can all be found [here](/static/images/wireframes/).
 
 ### Colour scheme
 
-Since Sakura means Cherry Blossom, I let cherry blossoms set the colour scheme for the page. The soft pink is in focus, accompanied by a mid tone grey on buttons and other details. I think the use of not to many colours allows the images and text to take the center stage, which is exactly my goal and what I imagine a restaurant would want. 
+Since Sakura means Cherry Blossom, I let cherry blossoms set the colour scheme for the page. The soft pink is in focus, accompanied by a mid tone grey on buttons and other details. I think the use of not to many colours allows the images and text to take the center stage, which is exactly my goal and what I imagine a restaurant like this would want. 
 
 
 ### Project planning
 
 ### Agile methodologies
 
-- Kanban board - I used the Project Board in Github for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with some tasks, to clarify for myself what each User Story demanded of me. Some USer Stories were written in different ways in the first stage, but only one of them made it to the Project board. 
+- Kanban board - I used the Project Board in GitHub for the planning of the Project. Issues were created as User Stories with Acceptance Criterias belonging to each User Story. The User Stories were also assigned with some tasks, to clarify for myself what each User Story demanded of me. As discussed above I had to come back to my Project board and redo plus add some stories, but this just meant that I learned the value of a good Agile approach even more. 
 
-As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really helped me to focus on the functionality of the project first.
+As I love working on the design of a web page it's easy to put way to much time on that part, so the User Stories really helped me to focus on the functionality of the project first and foremost.
 
-- Epics - I really understand the value of Epics for larger projects, to give a better overview of the projects user stories and further prioritize. But they seem a little over-ambitious for a project of this size, although they work well with my brain.
+- Epics - I really understand the value of Epics for larger projects, to give a better overview of the projects user stories and further prioritize the work process. But they seem a little over-ambitious for a project of this size, although they work well with my brain.
 
-- MoSCoW Prioritization - The User Stories are labeled with one of the following three categories, all according to the MoSCow prioritization methodology:
+- MoSCoW Prioritization - The User Stories are labeled with one of the following four categories, all according to the MoSCow prioritization methodology:
 
-  - Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority.
+  - Must Have: Features and requirements that are absolutely neccessary for the product to function and for the website to fulfill its purpose. These User Stories have the highest priority. 
 
   - Should Have: Important features that should be included if possible, but they are not critical for the website to function.
 
   - Could Have: Desirable features that can be added if there is enough time and resources.
 
   - Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
+
+
+Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) also got a wont'have label at this stage of the development - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
+
+[printscreen MoSCoW label prioritization]()
 
 
 ### Database Design
