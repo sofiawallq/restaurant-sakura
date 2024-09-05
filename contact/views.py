@@ -3,8 +3,16 @@ from django.contrib import messages
 from .forms import ContactRestaurant
 
 
-# Create your views here.
 def contact_restaurant(request):
+    """
+    Handles the contact form for customers to send messages to the restaurant.
+    Manages the display and submission of the contact form, allowing 
+    customers to send inquiries. If the request method is POST and 
+    form is valid, the message is saved to database and a success message 
+    is displayed. Otherwise, the form is re-rendered.
+    Returns either the contact form or a confirmation 
+    if the form submission is successful.
+    """
     contact_form = ContactRestaurant()
 
     if request.method == "POST":
