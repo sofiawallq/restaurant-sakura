@@ -57,6 +57,8 @@ When it was time to start building the project and write all the code I had abou
 
 I ended up with a total of 24 User Stories to work with in the end, the majority o them made it into the "Done" coloumn on my Project Board, while some simply didn't make it into the project at this point due to the short amount of time at my disposal. Those stories will on the other hand be great to use if I want to continue work on the project and create a really good portfolio piece for the future. 
 
+![printscreen user story]()
+
 I do belienve some of the stories could have been split up into even smaller parts and tasks, but if I were t do that the process would be even longer - so hopefully they are enough to give a general feel for the project and its purpose for the users. There are also a lot of Stories regarding the Admin that could have been drawn out, but since my project doesn't focus on operation and andministration of an actual restaurants webpage but at this point mainly focus on the User and their interaction with the back-end and front-end of the website - I leave those stories for the future.  
 
 Below are the epics and the Stories I ended up with. If they made it all the way or need more work I will discuss further down in the [User Story testing](#user-story-testing) section. 
@@ -146,12 +148,15 @@ Here you can view the same Contact page, but designed for a web browser instead.
 
 There were 13 wireframes made in total, which can all be found [here](/static/images/wireframes/).
 
+
 ### Colour scheme
 
 Since Sakura means Cherry Blossom, I let cherry blossoms set the colour scheme for the page. The soft pink is in focus, accompanied by a mid tone grey on buttons and other details. I think the use of not to many colours allows the images and text to take the center stage, which is exactly my goal and what I imagine a restaurant like this would want. 
 
 
+
 ### Project planning
+
 
 ### Agile methodologies
 
@@ -177,6 +182,7 @@ Important to note in this project is that some features which I believe are esse
 ![printscreen MoSCoW label prioritization]()
 
 
+
 ### Database Design
 
 Looking in the rearview mirror I set out to design a project that was a little to big to handle for little ol me - every page on the site got its on app in the root directory, because I had an idea that every page would have features that demanded its own models, views and so on ... Turns out that pages on the site like menues, location and contact could have consisted of just plain html-files placed in the projects root templates folder accompanied by some custom css. On the other hand the project is prepped for a majority of functions and cool add-ons on every page in the future since they are all structured as apps. Below is the root directory of my project, with "sakura" being the projects name, and the "booking"-app unfolded to show the content of one of the apps that fulfilles its purpose as an app at the moment. 
@@ -184,7 +190,7 @@ Looking in the rearview mirror I set out to design a project that was a little t
 ![printscreen root directory](/static/images/printscreen/root_directory.png)
 
 
-- Entity Relationship Diagrams(ERD)
+__Entity Relationship Diagrams(ERD)__
 
 Two custom models were made for the project, one to handle the "Book a table" form in the booking-app, and one to handle the "Contact"-form in the contact-app. Below is the original ERD's that were drawn out before the models were made. The User model is handled by the Django Framework. The ERD shows that the User model has a one-to-many relationship with my custom BookATable model - a User can make many bookings and many fields in the User model can be associated with the BookATable model, while only one field in the BookATable model is associated with one exact line in the User model.
 
@@ -207,89 +213,99 @@ Spencer also supported me in creating a BookingManager that checks to se if the 
 print(todays_bookings)"
 
 
-## Features
 
+## Features
 
 ### Existing features
 
 
 ### Header
 
-The main page is primarily made up of a header image/jumbotron with the restaurants name, a short tagline below to give the site visitor a quick understanding of what the place is all about, and two buttons leading the site visitor to either Book a table, or give them the possibility to view the menues - two features which to me are the primary functions on a restaurant web page. 
-
-Info section
+The main page/landing page is primarily made up of a header image/jumbotron with the restaurants name, a short tagline below to give the site visitor a quick understanding of what the place is all about, and two buttons leading the site visitor to either Book a table, or give them the possibility to view the menues - two features which to me are the primary functions on a restaurants webpage. Below the header image is some short text to give some more context to the page, along with the restaurants Opening hours - which I think a lot of visitors search for when visiting a wepage such as this. 
 
 ![printscreen header and info section](/static/images/printscreen/header_info_section.png)
+
+The mobile version containts pretty much the same features but presented in a responsive way, fitting into different screen sizes. I think some adjustmet of font sizes on smaller devices should have been made, but that wasn't a priority at the moment. 
+
 ![printscreen header mobile version](/static/images/printscreen/mobile_header.png)
 
 
 ### Navigation menu
 
-The navigation menu consist of links to various other pages - such as a Contact page, a Location page, a page to view the menues and a highlighted button redirecting the visitor to the page where they can book a table. It also consist of links to the restaurants social media pages, which at the moment all lead to the various landing pages of the social media platforms. At the far right of the navigation menu are two links leading to a page for Registration or Login - so that the visitor can have the option to Login and view, edit or delete their reservation - all in line with the __CRUD__ functionality. 
+The navigation menu consist of links to various other pages - such as a Contact page, a Location page, a page to view the menues and a highlighted button redirecting the visitor to the page where they can book a table. It also consist of links to the restaurants social media pages, which at the moment all lead to the various landing pages of the social media platforms. At the far right of the navigation menu are two links leading to a page for Registration or Sign In - so that the visitor have the option to register an acoount and then Sign in to be able to view, edit or delete their reservation - all in line with the __CRUD__ functionality. 
 
 ![printscreen web page navigation menu](/static/images/printscreen/nav-bar.png)
 
-With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. On smaller screen the social media icons aren't visible to the visitor in the navigation menu - so that it doesn't take up to much space. Instead they are only visible in the footer area on smaller screens. 
+With the help of Bootstrap and some custom CSS styling the navigation menu becomes a drop down feature on smaller devices. On smaller screens the social media icons aren't visible to the visitor in the navigation menu - so that the menu doesn't take up to much space. Instead they are only visible in the footer area on smaller screens. 
 
 ![printscreen drop down navigation menu](/static/images/printscreen/nav_bar_dropdown.png)
 
 
 ### Landing page & Footer
 
+When scrolling on the main page the next section consists of some hopefully tempting images and another Book a table-button to once again remind the user that they really need to do so! Here they can also find some contact information to the restaurant, alon with a link to the restaurants Contact form. 
+
 ![printscreen second view landing page](/static/images/printscreen/landing_page_second_view.png)
+
+The last view on the main page consists of another appealing image and a button that leads the site user to the menu page. Here you can also view the webpage footer with the restaurants address, copyright info and links to social media.  
 
 ![printscreen third view landing page and footer](/static/images/printscreen/landing_page_third_view_footer.png)
 
-![printscreen mobile second view landing page](/static/images/printscreen/mobile_second_view.png) ![printscreen mobile third view landing page](/static/images/printscreen/mobile_third_view.png)
+On mobile devices one of the images dissappear, along with the repeating Book a table-buttons as to not stack to much stuff on top of each other. Below this content is just a responsive version of the footer.
+
+![printscreen mobile second view landing page](/static/images/printscreen/mobile_second_view.png)
 
 
 ### Location page
 
+The location page is pretty straight forward - information about where the restaurant is located and a interactive embedded map that the site user can zoom in and out on, maximize and get directions from.
+
 ![printscreen restaurants location page](/static/images/printscreen/location_page.png)
+
+The mobile version of the location page is just a responsive version with the same content. 
 
 ![printscreen mobile restaurants location page](/static/images/printscreen/mobile_location_page.png)
 
+
 ### Contact page
 
-On the Contact page the user can find all the information they can possibly need if the wan't to get in touch with the restaurant. Phone number, email adress and the restaurants adress is all there, in case somebody want's to send them a letter. 
+On the Contact page the user can find all the information they can possibly need if the wan't to get in touch with the restaurant. Phone number, email adress and the restaurants adress is all there, in case somebody want's to send them a letter. There you also find the information about the restaurants opening hours, in the same style as on the main page. 
 
-![printscreen contact information]()
+![printscreen contact information](/static/images/printscreen/contact_page.png)
 
-![printscreen contact information]()
+Below the contact info is a handy form that the user can choose to fill out if they do not want to call or email the restaurant. The contact form is connencted to the Django admin panel for the administrator to view incoming questions and inquiries from site user and reply to them. 
 
-![printscreen contact information]()
+![printscreen contact form](/static/images/printscreen/contact_form.png)
 
-To make things even easier for the user there is a contact form on this page that the user can fill out to get in contact with the restaurant. 
+Mobile versions of the contact page - same contact but responsive layout. 
 
-![printscreen contact form]()
+![printscreen contact information](/static/images/printscreen/mobile_contact_page.png) ![printscreen contact form](/static/images/printscreen/mobile_contact_form.png)
 
-In line with a user friedly interface the user gets an immediate respons valiadationg that their message has been sent succesfully, or if there is any errors with the way they filled out the form. 
+In line with a user friedly interface the site user gets an immediate respons valiadating that their message has been sent succesfully, or if there is any errors with the way they filled out the form. 
 
 ![printscreen user respons from contact form]()
 
 
-
 ### Book a table page
 
-On the page called "Book a table" the user has the option to fill out a form to make a reservation request at the restaurant, without having to contact them via email or phone. All with the goal of making it as simple for the user as possible to make the decision to visit the restaurant. 
+On the page called "Book a table" the user has the option to fill out a form to make a reservation at the restaurant, without having to contact the restaurant via email or phone. All with the goal of making it as simple for the site user as possible to make the excellent decision to visit the restaurant. 
 
-![printscreen book a tabel form]()
+The form contains a Timeslot function for the site users to choose from when making a reservation and validation functions that prevent users from picking a date back in time. There is also the option to add a message to the restaurant - all in line with the user story about being able to make special requests when making a reservation at the restaurant.
 
-![printscreen user respons from form]()
+![printscreen book a tabel form](/static/images/printscreen/booking_page.png)
 
-There is a Timeslot function for visitors to choose from, validator functions and functions to prevent visitors from choosing dates back in time
+The site user will get a direct respons on the webpage confirming a successful booking, or different validation error messages if something is filled in incorrectly.They will also recieve an email confirmation containing the booking information. 
+
+![printscreen user respons from booking form]()
 
 
-### Register account/login page
-
-
-![printscreen]()
-
-### Footer
+### Register account/sign in and view reservations page
 
 
 
 ![printscreen]()
+
+
 
 ### Potential future features
 
@@ -299,6 +315,7 @@ a lot of functionality that needs to be added
 
 but see the value in the functions that are actually there
 
+closed dates
 
 ## Technologies used
 
@@ -308,12 +325,15 @@ but see the value in the functions that are actually there
 - JavaScript
 - Python
 
+
 ### Database
 - CI Database URL - used to store all data
 Postgres
 
+
 ### Frameworks
 Django - main framework for a secure and resuable development process
+
 
 ### Libraries & Additional Programs/Software/Tools
 - Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet. 
