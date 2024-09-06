@@ -11,7 +11,8 @@ from django.utils import timezone
 
 class BookingManager(models.Manager):
     """
-    Custom manager for the BookATable model, providing methods for fetching bookings.
+    Custom manager for the BookATable model,
+    providing methods for fetching bookings.
     """
     def todays_bookings(self):
         # Returns all bookings for the current date.
@@ -22,7 +23,7 @@ class BookingManager(models.Manager):
         return self.filter(user=user)
 
     def bookings_for_time(self, date, time):
-        #Return bookings made for a specific date and time slot.
+        # Return bookings made for a specific date and time slot.
         return self.filter(date=date, time=time)
 
 
@@ -35,11 +36,11 @@ class BookATable(models.Model):
         lastname (CharField) - last name of the person who booked.
         email (EmailField) - email address of the person who booked.
         date (DateField) - date of the booking.
-        time (CharField) - time slot of the booking, chosen from 
+        time (CharField) - time slot of the booking, chosen from
         pre-defined options.
         guests (PositiveIntegerField) - number of guests (1 to 8).
         message (TextField) - optional message from the person booking.
-        read (BooleanField) - indicates whether the booking has been marked 
+        read (BooleanField) - indicates whether the booking has been marked
         as read by admin.
     """
     TIMESLOT_CHOICES = [
@@ -67,8 +68,8 @@ class BookATable(models.Model):
 
     def __str__(self):
         """
-        String repres. of the booking object. 
-        Returns a string indicating booking:s last name, date and time. 
+        String repres. of the booking object.
+        Returns a string indicating booking:s last name, date and time.
         """
         return f"Booking made by {self.lastname} on {self.date} at {self.time}"
 
@@ -102,26 +103,27 @@ class BookATable(models.Model):
 
         if total_seats + self.guests > 100:
             raise ValidationError("No available tables for this time slot.")
-    
 
-    def save(self, *args, **kwargs):
-        """
-        Override save method to include custom validation.
-        """
-        self.clean()  # Perform the validation check
-        super().save(*args, **kwargs)
- 
 
-    class Meta:
-        """
-        Meta options for the BookATable model.
-        Attributes: verbose_name (str), verbose_name_plural (str),
-        ordering (list), constraints (list)
-        """
-        verbose_name = "Table Booking"
-        verbose_name_plural = "Table Bookings"
-        ordering = ['-date', '-time']
-        constraints = [
-            models.UniqueConstraint(
-                fields=['date', 'time', 'user'], name='unique_booking_per_user_per_time')
-        ]
+def save(self, *args, **kwargs):
+    """
+    Override save method to include custom validation.
+    """
+    self.clean()  # Perform the validation check
+    super().save(*args, **kwargs)
+
+
+class Meta:
+    """
+    Meta options for the BookATable model.
+    Attributes: verbose_name (str), verbose_name_plural (str),
+    ordering (list), constraints (list)
+    """
+    verbose_name = "Table Booking"
+    verbose_name_plural = "Table Bookings"
+    ordering = ['-date', '-time']
+    constraints = [
+        models.UniqueConstraint(
+            fields=['date', 'time', 'user'],
+            name='unique_booking_per_user_per_time')
+    ]

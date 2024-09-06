@@ -4,6 +4,8 @@ Restaurant Sakura is a fine dining restaurant focusing on the south east asian c
 
 The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herokuapp.com/)
 
+![printscreen responsive website]()
+
 ## Table of content
 - [UX/UI Design](#uxui-design)
   - [User Stories](#user-stories)
@@ -46,7 +48,7 @@ The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herok
 
 ## UX/UI Design
 
-I went for a quite clean design on the webpage itself - a minimal colour scheme to let the images and functions do the talking, and to give a airy feel - quite like I imagine the restaurant itself feels when you visit it! I set out with really high ambitions when it came to designing nice looking menues, responsive modals and beautiful forms to fill out - all with the help of a perfect Bootstrap grid system. Some things I managed to do - the design and visual effects on menues and modals that I imagined jsut didn't cut it into the short window of time I had for the project. The main focus was to add functionality to the different pages and make sure that the CRUD-functionality for reservations work, that the authentication part works as it should and tht everything connects to the back-end and updates the Django Admin panel the way it should. To summarise - there si so much more I want to do with this webpage! But my ambition was a wee bit to high and the time a wee bit to short, as my mentor pointed out to me a couple of times. 
+I went for a quite clean design on the webpage itself - a minimal colour scheme to let the images and functions do the talking, and to give a airy feel - quite like I imagine the restaurant itself feels when you visit it! I set out with really high ambitions when it came to designing nice looking menues, responsive modals and beautiful forms to fill out - all with the help of a perfect Bootstrap grid system. Some things I managed to do - the design and visual effects on menues and modals that I imagined jsut didn't cut it into the short window of time I had for the project. The main focus was to add functionality to the different pages and make sure that the CRUD-functionality for reservations work, that the authentication part works as it should and that everything connects to the back-end and updates the Django Admin panel the way it should. To summarise - there si so much more I want to do with this webpage! But my ambition was a wee bit to high and the time a wee bit to short, as my mentor pointed out to me a couple of times. 
 
 
 ### User Stories
@@ -178,8 +180,10 @@ As I love working on the design of a web page it's easy to put way to much time 
 
   - Won’t Have: Features that will not be included in the project at this point, but might be a desirable feature in future development. 
 
+![printscreen moscow open issues](/static/images/printscreen/open_issues.png) ![printscreen moscow closed issues](/static/images/printscreen/closed_issues.png)
 
-Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) also got a wont'have label at this stage of the development - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
+
+Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) didn't make it into the "Done" column on my Kanban board, infact they didn't even make it to "In progress" - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
 
 ![printscreen MoSCoW label prioritization]()
 
