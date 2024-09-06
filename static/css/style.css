@@ -22,6 +22,10 @@ a {
     color: black;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 
 /*Navigation bar*/
 .navbar-brand {
@@ -61,6 +65,7 @@ nav {
 .callout {
     background-color: rgba(255,236,236,0.8);
     padding: 20px 40px;
+    max-width: 90%;
 }
 
 
@@ -192,7 +197,7 @@ h3, h4 {
 
 /*Contact page*/
 .contact-background {
-    height: 50vh;
+    height: 60vh;
     background: url('/static/images/background_image_cherry_blossom_optimized.png') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -262,20 +267,12 @@ footer ul.nav-item {
 
     .callout {
         padding: 10px;
-        margin: 0 auto;
+        margin: auto;
         max-width: 95%;
     }
 
     .menu-header {
         height: 50vh;
-    }
-}
-
-@media (max-width: 768px) {
-    .callout {
-        padding: 10px;
-        margin: 0 auto;
-        max-width: 90%;
     }
 }
 

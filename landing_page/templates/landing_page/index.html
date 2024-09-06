@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 <!-- index.html content starts here -->
-{% block header %}
+{% block content %}
 
 <div class="container header">
   <div class="row">
@@ -18,10 +17,7 @@
   </div>
 </div>
 
-{% endblock header %}
-
-{% block information %}
-
+<!--Information section-->
 <div class="container information mt-3">
   <div class="row">
     <div class="col-12">
@@ -39,10 +35,7 @@
   </div>
 </div>
 
-{% endblock information %}
-
-{% block booking %}
-
+<!--Booking section-->
 <div class="container booking mt-5">
   <div class="row align-items-center">
     <div class="col-sm-12 col-md-6 img-fluid booking-image">
@@ -54,10 +47,7 @@
   </div>
 </div>
 
-{% endblock booking %}
-
-{% block contact %}
-
+<!--Contact section-->
 <div class="container contact mt-5 mt-md-2">
   <div class="row align-items-center justify-content-center">
     <div class="col-sm-12 col-md-6 text-center">
@@ -74,10 +64,7 @@
   </div>
 </div>
 
-{% endblock contact %}
-
-{% block menu %}
-
+<!--Menu section-->
 <div class="container menu mt-5">
   <div class="row align-items-center justify-content-center">
     <div class="col-12">
@@ -87,4 +74,4 @@
   </div>
 </div>
 
-{% endblock menu %}
+{% endblock %}
