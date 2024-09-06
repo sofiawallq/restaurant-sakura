@@ -391,6 +391,7 @@ Images are hosted in the projects static directory for this project, but in the 
 
 ## Manual testing
 
+The manual testing consisted of not only the things listed below, but they also meant asking everybody I know to test the website and all its functions such as filling out the Contact form, Booking a table via the form, register for an account and then login to see their reservations - and of course try to update or delete a reservation.
 
 ### Responsivness 
 
@@ -505,14 +506,10 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 - Install Python package for whitenoise with the command: pip3 install whitenoise==6.7.0
 - Add whitenoise to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
 - Add 'whitenoise.middleware.WhiteNoiseMiddleware' to the list of MIDDLEWARE in settings.py below Django SecurityMiddleware.
-
-Also, in the codestar/settings.py file, add a STATIC_ROOT path: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-Run the collectstatic command in the terminal to collect the static files into a staticfiles directory: python3 manage.py collectstatic
-
-Check the Python version used in your IDE and look up the supported runtimes and copy the closest to the one used in you IDE.
-
-Add a runtime.txt file to your app's root directory and add the Python version you copied from the list of supported runtimes in it.
+- In settings.py add a path to staticfiles in this way: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+- Run python3 manage.py collectstatic in the terminal to collect the static files and when asked to choose yes or no, type "yes" in the terminal.
+- Check what Python version is used in your development environment and look up the supported runtime closest to your Python version. 
+- Create a runtime.txt file in your apps root directory and add the Python version from the list of supported runtimes, in a format like this: python-3.12.5.
 
 
 4. Deploy on Heroku
