@@ -17,16 +17,7 @@
             <form id="bookingForm" method="post">
                 {% csrf_token %}
                 {{ booking_form.media }}
-            
                 {{ booking_form|crispy }}
-            
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="policyCheck" name="policy_check" required>
-                    <label class="form-check-label" for="policyCheck">
-                        I have read and agree to the <a href="#booking-policy">Booking Policy</a>.
-                    </label>
-                </div>
-  
                 <button class="btn btn-secondary" type="submit">Make reservation</button>
             </form>
         </div>

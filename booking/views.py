@@ -80,9 +80,13 @@ def booking_edit(request, booking_id):
 
 @login_required
 def booking_delete(request, booking_id):
-    try:
-        booking = get_object_or_404(BookATable, id=booking_id, user=request.user)
+    """
+    Handles the deletion of an existing booking.
+    Fetches booking by ID and deletes it if the request method is POST.
+    If successful, displays a success message and redirects to the booking list.
+    """
+    booking = get_object_or_404(BookATable, id=booking_id)
+    if request.method == "POST":
         booking.delete()
-        return JsonResponse({'success': True})
-    except Exception as e:
-        return JsonResponse({'success': False, 'error': str(e)}, status=500)
+        return redirect('booking_list')
+    return render(request, 'booking/booking_delete.html', {'booking': booking})
