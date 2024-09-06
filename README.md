@@ -39,7 +39,6 @@ The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herok
 - [Deployment](#deployment)
   - [Forking](#forking)
   - [Cloning](#cloning)
-  - [Deployment to GitHub](#deployment-to-github)
   - [Deployment to Heroku](#deployment-to-heroku)
 - [References/credit](#referencescredit)
   - [Content](#content)
@@ -324,90 +323,15 @@ The site user will get a direct respons on the webpage confirming a successful b
 
 ### Potential future features
 
-The project became bigger than my skills 
+There are A LOT of features that can be added to the page. The project became a bit bigger than my current skill set and even though I probably would have worked out a lot of the functions if I had the time for it - I unfortunately do not. 
 
-a lot of functionality that needs to be added
+There is still many functions to be added when it comes to the administration of the page - such as a UX friendly interface for the staff to deal with customer inquieres, modify bookings and so on - but that is a whole different project. 
 
-but see the value in the functions that are actually there
+Another part of the project that would add a lot of value to the user would be a page dedicated to reviews. And those user stories I have written regarding reviews would have been a nice place to start to get the CRUD-functionality up and running. Unfortunately I didn't come to that conclusion until way to late into the project - so I decided to stick with the user being able to edit a reservation. If I were to do it again I would have started with a review page and probably be satisfied with that. 
 
-closed dates
+I would also have loved some form of interactive picture section, with for example images tagged on Instagram taken at the restaurant. 
 
-## Technologies used
-
-### Languages
-- HTML5
-- CSS3
-- JavaScript
-- Python
-
-
-### Database
-- CI Database URL - used to store all data
-Postgres
-
-
-### Frameworks
-Django - main framework for a secure and resuable development process
-
-
-### Libraries & Additional Programs/Software/Tools
-- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet. 
-- Balsamique - used to create all wireframes for the project
-- Django All Auth - used for user registration and authentication
-- Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look.
-- Django Summernote - used as the editor for the Admin panel
-- dj-database-url - used to connect Django to database via URL
-- Favicon - used for finding a tab icon, which also became part of the logo for the restaruant project
-- Font Awesome - used for social media icons 
-- GitHub - used to store all the code and the Projects Kanban board
-- GitPod - used as the IDE during development
-- Google Fonts - used for custom fonts on the entire page
-- Gunicorn - used as the server to run Python code/Django on Heroku platform
-- Heroku - used as the platform to deploy the project
-- Lucidchart - used to create the Entity Relationship Diagrams, also known as ERD
-- Pexels - used to find suiting images for all pages of the site
-- Psycopg - 
-- Whitenoice - used to handle the static files for deployment
-
-Images are hosted in the directory this time, but in the future I want to try out Cloudinary.
-
-## Manual testing
-
-
-### Responsivness 
-
-Mainly thanks to Bootstrap the page is responsive on all devices, from mobile phones to tablets, laptops and larger screens. It reaches a max-width on larger devices as to not look to stretched out. 
-
-### Browser compability
-
-The project has been tested on different browsers, such as: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. It looks and functions pretty much the same on all browsers. 
-
-### Validator testing
-
-HTML - through the official W3C validator.
-
-![printscreen html validator]()
-
-CSS -  the official Jigsaw validator.
-
-![printscreen css validator](/static/images/printscreen/css_validation.png)
-
-JavaScript - the JavaScript check in JSHint came back 
-
-![printscreen javascript validator]()
-
-Python - PEP8 Python Validator
-
-There were quite a few files to run throught the PEP8 validator, many of them with too long lines and some trailing whitespace, but all have been corrected and hopefully no errors remain. 
-
-![printscreen python validator](/static/images/printscreen/python_validator.png)
-
-When testing the accessibility using Lighthouse for Chrome,
-
-![printscreen lighthouse]()
-
-
-### User Story testing
+Another important feature for a restaurant to have would be a function for sending an email to the visitor with their booking confirmation, in case they make a reservation at the restaurant. I started working on that but quickly gave up the idea due to other functions that were more important to get up and running. 
 
 Acceptance criterias regarding cancellation 
 The system prevents modifications or cancellations within a certain timeframe (e.g., 24 hours before the booking), if applicable.
@@ -422,50 +346,182 @@ mailto:link i contact, phonenumber clickable
 
 Special hours (e.g., holidays or special events) can be displayed and updated easily by the administrator.
 
-
  - Create an interface for administrators to update the hours without needing to modify code.
-
- interface for adminstrating bookings - here is were the user stories cannot be teested since such functions are above my ... great functions to build in the future if
- but for now the goal was to focus on an crud function for the user and authentication functions
 
  recover password
 
+## Technologies used
+
+### Languages
+- HTML5
+- CSS3
+- JavaScript
+- Python
+
+
+### Database
+- CI Database URL (Postgres) - used to store all data
+
+
+### Frameworks
+Django - main framework for a secure and resuable development process.
+
+
+### Libraries & Additional Programs/Software/Tools
+- Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet.
+- Balsamique - used to create all wireframes for the project
+- Django All Auth - used for user registration and authentication
+- Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look for a good UX
+- Django Summernote - used as the editor for the Admin panel
+- dj-database-url - used to connect Django to database via URL
+- Favicon - used for finding a tab icon, which also became part of the logo for the restaruant project
+- Font Awesome - used for social media icons 
+- GitHub - used to store all the code and the Projects Kanban board
+- GitPod - used as the IDE during development
+- Google Fonts - used for custom fonts on the entire page
+- Gunicorn - used as the server to run Python code/Django on Heroku platform
+- Heroku - used as the platform to deploy the project
+- Lucidchart - used to create the Entity Relationship Diagrams, also known as ERD
+- Pexels - used to find suiting images for all pages of the site
+- Psycopg - PostgreSQL adapter for Python
+- Whitenoice - used to handle the static files for deployment
+
+Images are hosted in the projects static directory for this project, but in the future I want to work Cloudinary.
+
+
+## Manual testing
+
+
+### Responsivness 
+
+Mainly thanks to Bootstrap the page is responsive on all devices - from mobile phones to tablets, laptops and larger screens. It reaches a max-width on larger devices as to not look to stretched out and looks alright on even the smallest mobile screens. I've asked friends and family to try it out on different devices to get as many opinions in as possible. 
+
+### Browser compability
+
+The project has been tested on different browsers such as: Google Chrome, Safari, Microsoft Edge and Mozilla Firefox. It looks and functions pretty much the same on all browsers. 
+
+### Validator testing
+
+- HTML - through the official W3C validator. There were some issues with buttons and anchor tags being mixed up in the html, so I had some sorting out to do. But now every bit of HTML code is up to standard.
+
+![printscreen html validator](/static/images/printscreen/html_validator.png)
+
+- CSS - through the official Jigsaw validator. No issues came back when i ran the code through the CSS validator. 
+
+![printscreen css validator](/static/images/printscreen/css_validation.png)
+
+- JavaScript - the JavaScript check in JSHint came back with some issues regarding syntax issues in some web browser, but nothing more than that so for now I will leave it at that.
+
+![printscreen javascript validator](/static/images/printscreen/js_validator.png)
+
+- Python - PEP8 Python Validator
+
+There were quite a few files to run throught the PEP8 validator, many of them with too long lines and some trailing whitespace, but all have been corrected and hopefully no errors remain. 
+
+![printscreen python validator](/static/images/printscreen/python_validator.png)
+
+When testing the accessibility using Lighthouse for Chrome,
+
+![printscreen lighthouse]()
+
+
+### User Story testing
+
+The User Story testing has been performed throughout the development. When building the site I moved the Stories I was working on into the "In Progress" column on my Kanban-board, and then checked that every acceptance criteria and task was fulfilled before moving it into the "Done" column. As you can see there are still Stories left in the "In progress" column, due to the fact that some criterias have been met, but not all of them. The project is still functional but I don't want to move them into the Done column until the criterias are fully met. 
+
+For example the User Story about modifying reservations as an administrator have been met on two of the criterias, but the remaining two will not be fulfilled until an admin friendly interface is developed. 
+
+![example user story modifying reservation](/static/images/printscreen/example_not_fulfilled_user_story.png)
+
+Along with the User Stories about a review page that haven't made it out of the "Todo" column yet. These are really good Stories to work with in the future and like I mentioned earlier, they would have been alot easier to start out with. But sometimes the logical thinking goes out the window.
+
+So the focus has been on getting some CRUD-functionality up and running with the User Stories about Booking a table, and authentication to go along with the stories about registration and login to a user account. Which I hope works as it should.
+
+![printscreen kanban board]()
+
+
 ### Bugs
 
+The bugs have been very present. I don't know how many times the url paths have stopped working the way they should and the number of "404 Page Not Found" messages I have caused are beond counting. 
+
+Most of them have been sorted out in the end - mainly thanks to Google and some much needed troubleshooting with ChatGPT. Sometimes the AI made the situation even worse, so its a wonderful tool when you need help, but the brain needs to to the majority of the thinking still. 
+
+Some things I haven't been able to sort out up to date - when a site user first makes a booking as a guest, and then registers for an accound the connection between their email and reservations isn't fully in place. So at the moment only users that have registered and then Make a reservation can view and edit their reservations. I tried to sort it out with adding a signals.py file to my booking app and updating the apps.py but its still not in place. 
+
+Also some alert messages that follow along with the Django Allauth is causing havock on the admin page when you make a lot of successful registrations, sign ins, bookings and so on at the same time. Good thing the messages work though - but not in an optimal way just yet. 
 
 
 ## Deployment
 
+This project was deployed using Heroku.
 
 ### Forking
+
+- Navigate to the GitHub repository.
+- On the top right hand side, click the button named "Fork".
+- A new page named "Create new Fork" will open up, where you can choose to edit hte name of the project.
+- Click on "Create Fork" at the bottom of the page. 
+- Now a copy of the project will appear in your list of repositories.
 
 
 ### Cloning
 
-
-### Deployment to GitHub
-
-The website was deployed using a hosting platform in the form of GitHub. The steps to deploy are as follows:
-
-In the GitHub repository of the project, navigate to the "Settings"-tab
-Select "Pages" in the left-hand menu and in the "Source" drop-down menu select "Deploy from a branch"
-In the "Branch" section below chose the main branch
-When the main branch is selected the GitHub repository will automatically refresh and after a little while you will find the Deployed page on the right-hand side with a detailed list of every updated deployment going forward.
-The link to the live project-site can be found here:
+- Navigate to the GitHub repository.
+- Click on the "Code" tab at the top of the repository and copy the URL for web that appears. 
+- Open up the terminal in a code editor of your choice and change the current working directory to a new one you will use to clone the repository. 
+- Type in "git clone" in the terminal, paste in the copied URL and press "Enter".
 
 
 ### Deployment to Heroku
 
-This project was deployed using Heroku
+1. Create and set up the Heroku app
+- Login to your Heroku account and navigate to the dashboard.
+- Click on the "New"-button to create a new app.
+- Give the app a unique name.
 
-Steps for deployment in Heroku:
 
-Create a new app in Heroku
-Under "Settings" add "Create Var" containing the key PORT and the value 8000.
-Further down (still under the "Settings"-tab), add Buildpacks "Python" and "Node.js" - in that order.
-Under the "Deploy"-tab choose Deployment method GitHub and connect to the right repository.
-Manually deploy the project via main-branch.
-The link to the mock terminal in Heroku can be found here:
+2. Ready your code for deployment in your Code Editor.
+- Install a production ready webserver for Heroku such as gunicorn by writing the following command in your terminal: pip3 install gunicorn~=20.1.0.
+- Add gunicorn==20.1.0 to the requirements.txt file with the following command in your terminal: pip3 freeze --local > requirements.txt.
+- Create a file called Procfile in the root directory of your project.
+- Inside the Procfile declare that the web process followed by the command to execute your Django project: web: gunicorn yourprojectsname.wsgi
+- Open the projects settings.py file an set DEBUG=False
+- In settings.py add '.herokuapp.com' to the ALLOWED_HOSTS list.
+- Git add, git commit and git push to GitHub so that all files are up to date in your repository.
+
+
+3. Ready your database for deployment
+- Create an env.py file and add the following:
+import os
+os.environ.setdefault( "DATABASE_URL", "")
+os.environ.setdefault("SECRET_KEY", "your__secret_key")
+- Check to se that your env.py file is added to the .gitignore file. 
+- Make sure your settings.py has this code in it: SECRET_KEY = os.environ.get("SECRET_KEY").
+- Click on the "Settings" tab and navigate to the "Reveal Config Vars" section. 
+- Add a SECRET_KEY value to Herokus Config Vars.
+
+
+4. Deployment with static files
+- Install Python package for whitenoise with the command: pip3 install whitenoise==6.7.0
+- Add whitenoise to your requirements.txt file with the command: pip3 freeze --local > requirements.txt
+- Add 'whitenoise.middleware.WhiteNoiseMiddleware' to the list of MIDDLEWARE in settings.py below Django SecurityMiddleware.
+
+Also, in the codestar/settings.py file, add a STATIC_ROOT path: STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+Run the collectstatic command in the terminal to collect the static files into a staticfiles directory: python3 manage.py collectstatic
+
+Check the Python version used in your IDE and look up the supported runtimes and copy the closest to the one used in you IDE.
+
+Add a runtime.txt file to your app's root directory and add the Python version you copied from the list of supported runtimes in it.
+
+
+4. Deploy on Heroku
+- Click on the "Deploy" tab on your Heroku Dashboard.
+- Under the "Deploy method" section choose to Connect to GitHub, depending on earlier access you might be asked to authenticate using GitHub.
+- Choose the projects repository in the list that apperas when you start to type in the search box. 
+- Start a manual deployment of the main branch by scrolling to the bottom of the Deploy-page and click on "Deploy branch".
+- Click "Open app" to view your deployed project. 
+- Open the "Resources" tab and switch to Eco Dyno to keep the project up and running. 
 
 
 ## References/credit
@@ -475,7 +531,9 @@ The link to the mock terminal in Heroku can be found here:
 
 Inspiration for the food and drink menues I borrowed from two of my favourite restaurants here in Gothenburg, Sweden: [Toso](https://toso.nu/) and [Cheri-Lee](https://www.cheri-lee.se/).
 
-Datetime picker to work I turned to ChatGPT in the end since my Bootstrap one didn't work as intended
+Datetime picker to work I turned to ChatGPT in the end since my Bootstrap one didn't work as intended.
+
+
 
 ### Media
 
