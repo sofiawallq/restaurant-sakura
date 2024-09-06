@@ -14,20 +14,100 @@
                 <div class="grid-item"><strong>Date:</strong> {{ booking.date }}</div>
                 <div class="grid-item"><strong>Time:</strong> {{ booking.time }}</div>
                 <div class="grid-item"><strong>Number of guests:</strong> {{ booking.guests }}</div>
-                <div class="col-12 text-center grid-item">
-                    <button class="btn btn-outline-secondary btn-edit btn-sm"><a
-                            href="{% url 'booking_edit' booking.id %}">Edit</a></button>
-                    <button class="btn btn-outline-secondary btn-delete btn-sm"><a
-                            href="{% url 'booking_delete' booking.id %}">Delete</a></button>
+                <div id="booking-row-{{ booking.id }}" class="col-12 text-center grid-item">
+                    <a class="btn btn-outline-secondary btn-edit btn-sm" href="{% url 'booking_edit' booking.id %}">Edit</a>
+                    <button class="btn btn-outline-secondary btn-delete btn-sm"
+                        data-booking-id="{{ booking.id }}">Delete</button>
                 </div>
-                {% empty %}
-                <div>No reservations found</div>
-                {% endfor %}
             </div>
-            <button button class="btn btn-secondary align-item-center" type="button"><a href="{% url 'booking' %}">New
-                    Reservation</a></button>
+            {% empty %}
+            <div>No reservations found</div>
+            {% endfor %}
+        </div>
+        <button class="btn btn-secondary align-item-center" type="button">
+            <a href="{% url 'booking' %}">New Reservation</a>
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Delete confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog"
+    aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h2 class="modal-title text-center" id="deleteConfirmationModalLabel">Delete Confirmation</h2>
+            </div>
+            <div class="modal-body text-center">
+                <p>Are you sure you want to delete this reservation?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button id="confirmDeleteButton" type="button" class="btn btn-danger">Delete</button>
+            </div>
         </div>
     </div>
 </div>
 
 {% endblock %}
+
+{% block scripts %}
+
+<!-- JavaScript for handling the modal -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let bookingIdToDelete = null;
+
+        // När en "Delete"-knapp klickas, öppnar modalen och lagrar bookingId
+        document.querySelectorAll('.btn-delete').forEach(button => {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                bookingIdToDelete = this.dataset.bookingId; // Hämta bookingId från knappen
+                $('#deleteConfirmationModal').modal('show'); // Visa modalen i Bootstrap 4
+            });
+        });
+
+        // När "Confirm Delete" i modalen klickas
+        document.getElementById('confirmDeleteButton').addEventListener('click', function () {
+            if (bookingIdToDelete) {
+                fetch(`/booking/delete/${bookingIdToDelete}/`, {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': document.querySelector('meta[name="csrf-token"]')
+                                .getAttribute('content'), // Lägg till CSRF-token här
+                            'Content-Type': 'application/json' // Specificera content-type som JSON
+                        },
+                        body: JSON.stringify({}) // Skicka en tom kropp för POST-förfrågan
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            return response.text().then(text => {
+                                throw new Error(text);
+                            });
+                        }
+                    })
+                    .then(data => {
+                        if (data.success) {
+                            // Ta bort raden från listan utan att ladda om sidan
+                            const row = document.getElementById(`booking-row-${bookingIdToDelete}`);
+                            if (row) {
+                                row.remove();
+                            }
+                            $('#deleteConfirmationModal').modal(
+                            'hide'); // Stäng modalen i Bootstrap 4
+                        } else {
+                            alert('There was an error deleting the reservation.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+    });
+</script>
+
+{% endblock scripts %}

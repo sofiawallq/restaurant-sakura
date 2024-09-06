@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 from .forms import BookATableForm
 from .models import BookATable
 
@@ -80,15 +82,9 @@ def booking_edit(request, booking_id):
 
 @login_required
 def booking_delete(request, booking_id):
-    """
-    Handles the deletion of an existing booking.
-    Fetches booking by ID and deletes it if the request method is POST.
-    If successful, displays a success message and redirects to the booking list.
-    """
-    booking = get_object_or_404(BookATable, id=booking_id)
-    if request.method == "POST":
+    try:
+        booking = get_object_or_404(BookATable, id=booking_id, user=request.user)
         booking.delete()
-        messages.success(request, "Reservation deleted successfully")
-        return redirect('booking_list')
-
-    return render(request, 'booking/booking_delete.html', {'booking': booking})
+        return JsonResponse({'success': True})
+    except Exception as e:
+        return JsonResponse({'success': False, 'error': str(e)}, status=500)

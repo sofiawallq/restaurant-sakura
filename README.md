@@ -91,6 +91,8 @@ __EPIC: Manage reservations__
 
 - As a __Site Admin__ I can view the total number of already booked seats at a given time/date so that we can prevent overbooking the restaurant.
 
+- As a __Site Admin__ I can modify bookings in the admin panel so that I can make sure everybody gets seated and we have enough staff to care for every guest.
+
 
 __EPIC: Contact the restaurant__
 
@@ -347,7 +349,6 @@ Django - main framework for a secure and resuable development process
 ### Libraries & Additional Programs/Software/Tools
 - Bootstrap - used for some of the front-end design. Mainly to make the page responsive and make use of Bootstraps grid system. It was accompanied by some custom CSS since I'm not all that familiar with Bootstraps many fuctions and add ons just yet. 
 - Balsamique - used to create all wireframes for the project
-- Cloudinary - 
 - Django All Auth - used for user registration and authentication
 - Django Crispy Forms - used for all forms on the page, mainly to control their behaviour and give them the same look.
 - Django Summernote - used as the editor for the Admin panel
@@ -364,7 +365,7 @@ Django - main framework for a secure and resuable development process
 - Psycopg - 
 - Whitenoice - used to handle the static files for deployment
 
-
+Images are hosted in the directory this time, but in the future I want to try out Cloudinary.
 
 ## Manual testing
 

@@ -17,7 +17,16 @@
             <form id="bookingForm" method="post">
                 {% csrf_token %}
                 {{ booking_form.media }}
-                {{ booking_form | crispy }}
+            
+                {{ booking_form|crispy }}
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="policyCheck" name="policy_check" required>
+                    <label class="form-check-label" for="policyCheck">
+                        I have read and agree to the <a href="#booking-policy">Booking Policy</a>.
+                    </label>
+                </div>
+  
                 <button class="btn btn-secondary" type="submit">Make reservation</button>
             </form>
         </div>
@@ -39,15 +48,16 @@
 </div>
 
 <!-- Booking confirmation Modal -->
-<div class="modal fade" id="bookingconfirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+<div class="modal fade" id="bookingconfirmationModal" tabindex="-1" role="dialog"
+    aria-labelledby="confirmationModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content text-center">
             <div class="modal-header">
                 <h2 class="modal-title text-center" id="confirmationModalLabel">Booking Confirmation</h2>
             </div>
             <div class="modal-body text-center">
-                <p>Thank you for your reservation request!</p>
-                <p>You will receive a reply on you email shortly.</p> 
+                <p>Thank you for your reservation!</p>
+                <p>You will receive a reply on you email shortly.</p>
                 <p>We look forward to seeing you at the table!</p>
             </div>
             <div class="modal-footer">
@@ -61,17 +71,17 @@
 
 {% block scripts %}
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('success')) {
             const modalElement = document.getElementById('bookingconfirmationModal');
             if (modalElement) {
                 var confirmationModal = new bootstrap.Modal(modalElement);
                 confirmationModal.show();
-    
-                // Rensa query-parametern från URL:en
+
                 urlParams.delete('success');
-                window.history.replaceState({}, document.title, window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : ''));
+                window.history.replaceState({}, document.title, window.location.pathname + (urlParams
+                .toString() ? '?' + urlParams.toString() : ''));
             } else {
                 console.error('Modal element not found');
             }

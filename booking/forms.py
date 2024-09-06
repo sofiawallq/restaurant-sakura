@@ -18,11 +18,18 @@ class BookATableForm(forms.ModelForm):
         time (str) - time of the booking, chosen from predefined options.
         message (str) - optional message from the person making the booking.
     """
+    policy_check = forms.BooleanField(
+        required=True,
+        label="I have read and agree to the Booking Policy",
+        error_messages={'required': 'You must agree to the booking policy to proceed.'}
+    )
+
     class Meta:
         model = BookATable
         fields = [
             'firstname', 'lastname', 'email', 'guests',
-            'date', 'time', 'message']
+            'date', 'time', 'message'
+        ]
         widgets = {
             'date': forms.DateInput(attrs={
                 'class': 'form-control', 'id': 'date_picker', 'type': 'date'}),

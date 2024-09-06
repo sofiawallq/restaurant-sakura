@@ -9,10 +9,8 @@
     <div class="col-12 callout jumbotron text-center">
       <h1 class="jumbotron-header">Welcome to Restaurant Sakura!</h1>
       <p>A dining experience focusing on asian cuisine</p>
-      <button type="button" class="btn btn-secondary btn-lg header-btn"><a
-          href="{% url 'booking' %}">Book a table</a></button>
-      <button type="button" class="btn btn-secondary btn-lg header-btn"><a
-          href="{% url 'menues' %}">Menues</a></button>
+      <a href="{% url 'booking' %}" class="btn btn-secondary btn-lg header-btn">Book a table</a>
+      <a href="{% url 'menues' %}" class="btn btn-secondary btn-lg header-btn">Menues</a>
     </div>
   </div>
 </div>
@@ -42,7 +40,7 @@
       <img src="/static/images/dinner_plate_main_page_optimized.png" alt="image of dinner plate">
     </div>
     <div class="col-md-6 text-center align-items-center justify-content-center d-none d-md-flex">
-      <button type="button" class="btn btn-secondary btn-lg book-btn d-none d-md-block"><a class="book-link" href="{% url 'booking' %}">Book a table</a></button>
+      <a class="book-link btn btn-secondary btn-lg book-btn d-none d-md-block" href="{% url 'booking' %}">Book a table</a>
     </div>
   </div>
 </div>
@@ -54,9 +52,8 @@
       <h2>Contact us at:</h2>
       <h6>Mail: <a href="mailto:info@restaurantsakura.com">info@restaurantsakura.com</a></h6>
       <h6>Phone: +46 44 44 44</h6>
-      <h6>Or use our: <button type="button" class="btn btn-outline-secondary">
-        <a class="nav-link {% if request.path == contact_url %}active"
-        aria-current="page{% endif %}" href="{% url 'contact' %}">Contact form</button></a></h6>
+      <h6>Or use our:
+        <a class="btn btn-outline-secondary" href="{% url 'contact' %}">Contact form</a></h6>
     </div>
     <div class="col-sm-12 col-md-6 img-fluid contact-image text-md-right mt-5 d-none d-md-flex">
       <img src="/static/images/drinks_main_page_optimized.png" alt=" image of drinks">
@@ -68,8 +65,7 @@
 <div class="container menu mt-5">
   <div class="row align-items-center justify-content-center">
     <div class="col-12">
-      <button type="button" class="btn btn-secondary btn-lg menu-btn"><a
-          class="menu-link" href="{% url 'menues' %}">View our menues</a></button>
+      <a class="menu-link btn btn-secondary btn-lg menu-btn" href="{% url 'menues' %}">View our menues</a>
     </div>
   </div>
 </div>
