@@ -61,14 +61,12 @@ def booking_edit(request, booking_id):
     the form is validated, and if valid, the booking is updated.
     If GET, the form is pre-populated with the booking's current data.
     """
-    booking = get_object_or_404(BookATable, id=booking_id)
+    booking = get_object_or_404(BookATable, id=booking_id, user=request.user)
+    
     if request.method == "POST":
         form = BookATableForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(
-                request, "Reservation request"
-                "updated successfully!")
             return redirect('booking_list')
         else:
             message.error(

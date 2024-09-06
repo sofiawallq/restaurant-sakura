@@ -9,26 +9,27 @@
             <h1>Your Reservations</h1>
             <div class="reservation-grid mt-4">
                 {% for booking in bookings %}
-                <div class="grid-item"><strong>Name:</strong> {{ booking.lastname }}</div>
-                <div class="grid-item"><strong>Email:</strong> {{ booking.email }}</div>
-                <div class="grid-item"><strong>Date:</strong> {{ booking.date }}</div>
-                <div class="grid-item"><strong>Time:</strong> {{ booking.time }}</div>
-                <div class="grid-item"><strong>Number of guests:</strong> {{ booking.guests }}</div>
-                <div id="booking-row-{{ booking.id }}" class="col-12 text-center grid-item">
-                    <a class="btn btn-outline-secondary btn-edit btn-sm" href="{% url 'booking_edit' booking.id %}">Edit</a>
-                    <button class="btn btn-outline-secondary btn-delete btn-sm"
-                        data-booking-id="{{ booking.id }}">Delete</button>
+                <div class="grid-item">
+                    <strong>Name:</strong> {{ booking.lastname }}<br>
+                    <strong>Email:</strong> {{ booking.email }}<br>
+                    <strong>Date:</strong> {{ booking.date }}<br>
+                    <strong>Time:</strong> {{ booking.time }}<br>
+                    <strong>Number of guests:</strong> {{ booking.guests }}<br>
+                    <div id="booking-row-{{ booking.id }}" class="text-center mt-2">
+                        <a class="btn btn-outline-secondary btn-edit btn-sm" href="{% url 'booking_edit' booking.id %}">Edit</a>
+                        <button class="btn btn-outline-secondary btn-delete btn-sm"
+                            data-booking-id="{{ booking.id }}">Delete</button>
+                    </div>
                 </div>
+                {% empty %}
+                <div>No reservations found</div>
+                {% endfor %}
             </div>
-            {% empty %}
-            <div>No reservations found</div>
-            {% endfor %}
+            <button class="btn btn-secondary align-item-center mt-4" type="button">
+                <a href="{% url 'booking' %}" class="text-white">New Reservation</a>
+            </button>
         </div>
-        <button class="btn btn-secondary align-item-center" type="button">
-            <a href="{% url 'booking' %}">New Reservation</a>
-        </button>
     </div>
-</div>
 </div>
 
 <!-- Delete confirmation Modal -->

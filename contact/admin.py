@@ -6,4 +6,4 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(ContactRestaurant)
 class ContactRestaurantAdmin(admin.ModelAdmin):
 
-    list_display = ('message', 'read',)
+    list_display = ('subject', 'name', 'message', 'read',)
