@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactRestaurant
 
@@ -19,9 +19,7 @@ def contact_restaurant(request):
         contact_form = ContactRestaurant(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.add_message(
-                request, messages.SUCCESS, "New message recieved.")
-            return render(request, 'contact/contact_confirmation.html')
+            return redirect('/contact/?success=true')
 
     return render(
         request,

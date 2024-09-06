@@ -23,13 +23,11 @@ def book_table(request):
             else:
                 booking.user = None
             booking.save()
-            messages.success(
-                request, "Your reservation request has been"
-                "submitted successfully.")
-            return redirect('booking/booking_confirmation')
+
+            return redirect('/booking/?success=true')
         else:
             messages.error(
-                request, "There was an error with your reservation request."
+                request, "There was an error with your reservation request." 
                 "Please check the form and try again.")
     else:
         booking_form = BookATableForm()
@@ -39,14 +37,6 @@ def book_table(request):
         'booking/booking.html',
         {'booking_form': booking_form}
     )
-
-
-def booking_confirmation(request):
-    """
-    Renders the booking confirmation template.
-
-    """
-    return render(request, 'booking/booking_confirmation.html')
 
 
 @login_required
@@ -88,6 +78,7 @@ def booking_edit(request, booking_id):
             'form': form, 'booking': booking})
 
 
+@login_required
 def booking_delete(request, booking_id):
     """
     Handles the deletion of an existing booking.

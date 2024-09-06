@@ -17,4 +17,43 @@
     </div>
 </div>
 
+<!-- Delete confirmation Modal -->
+<div class="modal fade" id="deleteconfirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h2 class="modal-title text-center" id="confirmationModalLabel">Delete Confirmation</h2>
+            </div>
+            <div class="modal-body text-center">
+                <p>Your reservation has been successfully deleted!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            const modalElement = document.getElementById('deleteconfirmationModal');
+            if (modalElement) {
+                var confirmationModal = new bootstrap.Modal(modalElement);
+                confirmationModal.show();
+
+                // Rensa query-parametern från URL:en
+                urlParams.delete('success');
+                window.history.replaceState({}, document.title, window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : ''));
+            } else {
+                console.error('Modal element not found');
+            }
+        }
+    });
+</script>
+
+{% endblock scripts %}

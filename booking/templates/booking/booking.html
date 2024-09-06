@@ -10,10 +10,11 @@
         <div class="col-12 col-md-6 my-5">
             <h2>Make a reservation</h2>
             <p>Fill out the form below and we will confirm your reservation via email.</p>
-            <p>Make sure to read the restaurants <a href="#booking-policy">Booking Policy</a> before completing your reservation.</p>
+            <p>Make sure to read the restaurants <a href="#booking-policy">Booking Policy</a> before completing your
+                reservation.</p>
 
             <!-- Book a table form -->
-            <form method="post">
+            <form id="bookingForm" method="post">
                 {% csrf_token %}
                 {{ booking_form.media }}
                 {{ booking_form | crispy }}
@@ -26,14 +27,56 @@
         <div class="col-12 col-md-6 contact-background">
             <div class="callout text-center" id="booking-policy">
                 <h2>Booking Policy:</h2>
-                <p>If a reservation is made then the table is yours for the whole of service. 
-                    However, should you arrive more than 30 minutes after your booking time, 
+                <p>If a reservation is made then the table is yours for the whole of service.
+                    However, should you arrive more than 30 minutes after your booking time,
                     you may lose your table to another group.</p>
-                <p>It is essential that we are notified of any specific dietary requirements prior to your visit. 
+                <p>It is essential that we are notified of any specific dietary requirements prior to your visit.
                     If you have not informed us at the point of booking,
                     please contact the restaurant to discuss your requirements with a member of our team.</p>
             </div>
         </div>
     </div>
+</div>
 
-    {% endblock %}
+<!-- Booking confirmation Modal -->
+<div class="modal fade" id="bookingconfirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h2 class="modal-title text-center" id="confirmationModalLabel">Booking Confirmation</h2>
+            </div>
+            <div class="modal-body text-center">
+                <p>Thank you for your reservation request!</p>
+                <p>You will receive a reply on you email shortly.</p> 
+                <p>We look forward to seeing you at the table!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('success')) {
+            const modalElement = document.getElementById('bookingconfirmationModal');
+            if (modalElement) {
+                var confirmationModal = new bootstrap.Modal(modalElement);
+                confirmationModal.show();
+    
+                // Rensa query-parametern från URL:en
+                urlParams.delete('success');
+                window.history.replaceState({}, document.title, window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : ''));
+            } else {
+                console.error('Modal element not found');
+            }
+        }
+    });
+</script>
+
+{% endblock scripts %}

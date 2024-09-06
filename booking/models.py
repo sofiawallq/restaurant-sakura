@@ -1,7 +1,11 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.mail import send_mail
+from django.conf import settings
 from django.utils import timezone
 
 
@@ -98,6 +102,7 @@ class BookATable(models.Model):
 
         if total_seats + self.guests > 100:
             raise ValidationError("No available tables for this time slot.")
+    
 
     def save(self, *args, **kwargs):
         """
@@ -105,6 +110,7 @@ class BookATable(models.Model):
         """
         self.clean()  # Perform the validation check
         super().save(*args, **kwargs)
+ 
 
     class Meta:
         """
@@ -119,4 +125,3 @@ class BookATable(models.Model):
             models.UniqueConstraint(
                 fields=['date', 'time', 'user'], name='unique_booking_per_user_per_time')
         ]
-        
