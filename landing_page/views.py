@@ -5,6 +5,11 @@ from django.template import loader
 from django.http import HttpResponse
 
 
-# Create your views here.
 def home_page(request):
     return render(request, 'landing_page/index.html')
+
+def menues_view(request):
+    return render(request, 'landing_page/menues.html')
+
+def locate_restaurant(request):
+    return render(request, 'landing_page/location.html')    

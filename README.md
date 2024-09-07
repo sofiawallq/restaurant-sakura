@@ -192,7 +192,9 @@ Important to note in this project is that some features which I believe are esse
 
 Looking in the rearview mirror I set out to design a project that was a little to big to handle for little ol me - every page on the site got its on app in the root directory, because I had an idea that every page would have features that demanded its own models, views and so on ... Turns out that pages on the site like menues, location and contact could have consisted of just plain html-files placed in the projects root templates folder accompanied by some custom css. On the other hand the project is prepped for a majority of functions and cool add-ons on every page in the future since they are all structured as apps. Below is the root directory of my project, with "sakura" being the projects name, and the "booking"-app unfolded to show the content of one of the apps that fulfilles its purpose as an app at the moment. 
 
-![printscreen root directory](/static/images/printscreen/root_directory.png)
+Project consist of one main project named sakura, one landing-page app containing multiple templates and two apps named booking and contact containing models, views and son on
+
+![printscreen root directory]()
 
 
 __Entity Relationship Diagrams(ERD)__

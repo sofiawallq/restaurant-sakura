@@ -54,12 +54,9 @@ INSTALLED_APPS = [
     'django_summernote',
     'crispy_forms',
     'crispy_bootstrap5',
-    'bootstrap_datepicker_plus',
     'landing_page',
     'booking',
     'contact',
-    'location',
-    'menues',
 
 ]
 
