@@ -48,7 +48,7 @@ def booking_list(request):
     Requires user to be logged in. Fetches all bookings associated with user
     and displays them in a list format.
     """
-    bookings = BookATable.objects.filter(user=request.user)
+    bookings = BookATable.objects.filter(user=request.user).order_by('date')
     return render(request, 'booking/booking_list.html', {'bookings': bookings})
 
 
