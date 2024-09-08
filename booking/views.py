@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse
@@ -67,15 +67,22 @@ def booking_edit(request, booking_id):
         form = BookATableForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return redirect('booking_list')
+            return redirect('booking_edit_confirmation')
         else:
-            message.error(
-                request, "There was an error with updating your reservation")
+            messages.error(request, 'There was an error updating your reservation. Please try again.')
     else:
         form = BookATableForm(instance=booking)
 
     return render(request, 'booking/booking_edit.html', {
-            'form': form, 'booking': booking})
+        'form': form, 'booking': booking})
+
+
+@login_required
+def booking_edit_confirmation(request):
+    """
+    Renders a confirmation page after a booking has been successfully updated.
+    """
+    return render(request, 'booking/booking_edit_confirmation.html')        
 
 
 @login_required
