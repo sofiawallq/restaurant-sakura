@@ -321,7 +321,6 @@ When logged in the user has the option to logut, before they do so they get the 
 
 ![printscreen sign out confirmation](/static/images/printscreen/sign_out.png)
 
-
 When registered and logged in the user has the option to view a list of their reservations (that have been made after they registered for an account) and there they can edit or choose to delte their reservation. The reservations are ordered by date with the closest upcomming one first.
 
 ![printscreen reservation list](/static/images/printscreen/list_reservations.png)
@@ -424,9 +423,9 @@ There were quite a few files to run throught the PEP8 validator, many of them wi
 
 ![printscreen python validator](/static/images/printscreen/python_validator.png)
 
-When testing the accessibility using Lighthouse for Chrome, the result didn't really end up where I like them to be, but I'll go with that for now. 
+When testing the page using Lighthouse for Chrome, the result didn't really end up where I like them to be, but I'll go with that for now due to more pressing matters. The biggest issues concern large images, which can be updated/change format in the future and some labels and alternative texts that need to updated for external links to improve the Accessibility.
 
-![printscreen lighthouse]()
+![printscreen lighthouse](/static/images/printscreen/lighthouse_validation.png)
 
 
 ### User Story testing
@@ -437,24 +436,26 @@ For example the User Story about modifying reservations as an administrator have
 
 ![example user story modifying reservation](/static/images/printscreen/example_not_fulfilled_user_story.png)
 
-Along with the User Stories about a review page that haven't made it out of the "Todo" column yet. These are really good Stories to work with in the future and like I mentioned earlier, they would have been alot easier to start out with. But sometimes the logical thinking goes out the window.
+Along with the User Stories regarding some admin features, there are stories about a review page that haven't made it out of the "Todo" column yet. These are really good Stories to work with in the future and like I mentioned earlier, they would have been alot easier to start out with. But sometimes the logical thinking goes out the window.
 
-So the focus has been on getting some CRUD-functionality up and running with the User Stories about Booking a table, and authentication to go along with the stories about registration and login to a user account. Which I hope works as it should.
+So the focus has been on getting some CRUD-functionality up and running with the User Stories about Booking a table and then being able to edit the reservation in a signed in view. Plus authentication to go along with the stories about registration and sign in to a user account. Which I hope works as it should.
 
-![printscreen kanban board]()
+![printscreen kanban board](/static/images/printscreen/kanban_board.png)
 
 
 ### Bugs
 
-The bugs have been very present. I don't know how many times the url paths have stopped working the way they should and the number of "404 Page Not Found" messages I have caused are beond counting. 
+The bugs have been very present. I don't know how many times the url paths have stopped working the way they should, and the number of "404 Page Not Found" messages I have caused are beyond counting. 
 
-Most of them have been sorted out in the end - mainly thanks to Google and some much needed troubleshooting with ChatGPT. Sometimes the AI made the situation even worse, so its a wonderful tool when you need help, but the brain needs to to the majority of the thinking still. 
+Most of them have been sorted out in the end - mainly thanks to Google and some much needed troubleshooting with ChatGPT. Sometimes the AI made the situation even worse, so its a wonderful tool when you need help, but the brain needs to do the majority of the logical thinking. 
 
-Some things I haven't been able to sort out up to date - when a site user first makes a booking as a guest, and then registers for an accound the connection between their email and reservations isn't fully in place. So at the moment only users that have registered and then Make a reservation can view and edit their reservations. I tried to sort it out with adding a signals.py file to my booking app and updating the apps.py but its still not in place. 
+Some things I haven't been able to sort out up to date - when a site user first makes a booking as a guest, and then registers for an accound the connection between their email and reservations isn't fully in place. So at the moment only users that have registered and then Make a Reservation can view and edit their reservations. I tried to sort it out with adding a signals.py file to my booking app and updating the apps.py to listen for already made resrvations connected to an email address, but its not in place at the moment.  
 
-Also some alert messages that follow along with the Django Allauth is causing havock on the admin page when you make a lot of successful registrations, sign ins, bookings and so on at the same time. Good thing the messages work though - but not in an optimal way just yet. 
+Also some alert messages that follow along with the Django Allauth is causing havock on the admin page when you make a lot of successful registrations, sign ins, bookings and so on at the same time. They all show up on the admin page but some of them never make it to the webpage to be viewed by the user as they should. Good thing the messages work - but not in an optimal way just yet. If I have the time to dig deeper into the messages that are connected to the html-files that go along with installing AllAuth, then I might sort it out. 
 
-At this point the confirmation messages for signing in and out only show up on the admin panel page, and even though I have tried to redirect the messages, create modules and tried to redirect the Sign-In action to a new page based on a confirmation html-file there were always a new error showing up - so for the being this function does not work as I intended it to. 
+At this point the confirmation messages for signing in and out only show up on the admin panel page, and even though I have tried to redirect the messages, create modules for it and tried to redirect the Sign-In action to a new page based on a confirmation html-file there were always a new error showing up - so for the being this function does not work as I intended it to. The only confirmation of the sign-in status is that the user can see wheather they are logged in or not up in the top right corner, which at least is some form of respons to the user. 
+
+![printscreen logged status](/static/images/printscreen/logged_status.png)
 
 
 ## Deployment
@@ -533,13 +534,16 @@ os.environ.setdefault("SECRET_KEY", "your__secret_key")
 
 Inspiration for the food and drink menues I borrowed from two of my favourite restaurants here in Gothenburg, Sweden: [Toso](https://toso.nu/) and [Cheri-Lee](https://www.cheri-lee.se/).
 
-Datetime picker to work I turned to ChatGPT in the end since my Bootstrap one didn't work as intended.
+For some of the functions that go along with validating my Booking Form I had to turn to my mentor Spencer Barriball and with some help from ChatGPT we got it sorted out. He also solved osme issues with my Datetime picker due to the fact that my Bootstrap one didn't work as intended. 
 
+I also chose to ask ChatGPT for a good example of a docstring, which I then altered for the different parts of Python code in the progress. But thanks to AI i got a good structure to work with. 
+
+The Code Institute code along project "I think, Therefore I blog" has been extremly helpful when it comes to setting up the structure for the project and I have returned to it again and agian throughout the development to make sure i use the right commands, deploy in the right way and so on. The models we worked with in that project was of course inspiration for when designing my own two custom models for my project. 
+
+As always [Stack Overflow](https://stackoverflow.co/) has been my go to place everytime I've googled a piece of code for troubleshooting. 
 
 
 ### Media
 
-Favicon
-
-Images were taken from Pixels.com
+All images for the project were found at [Pexels.com](https://www.pexels.com/), and the perfect cherry blossom icon was picked from [Favicon](https://favicon.io/emoji-favicons/). 
 
