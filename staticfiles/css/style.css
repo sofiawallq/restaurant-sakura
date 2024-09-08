@@ -221,7 +221,6 @@ h3, h4 {
 
 .grid-item {
     padding: 0px;
-    border-bottom: 1px solid #ddd;
 }
 
 .grid-item:last-child {

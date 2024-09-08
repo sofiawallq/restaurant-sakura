@@ -12,4 +12,4 @@ def menues_view(request):
     return render(request, 'landing_page/menues.html')
 
 def locate_restaurant(request):
-    return render(request, 'landing_page/location.html')    
+    return render(request, 'landing_page/location.html')

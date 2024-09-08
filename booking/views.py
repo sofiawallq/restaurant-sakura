@@ -92,8 +92,17 @@ def booking_delete(request, booking_id):
     Fetches booking by ID and deletes it if the request method is POST.
     If successful, displays a success message and redirects to the booking list.
     """
-    booking = get_object_or_404(BookATable, id=booking_id)
+    booking = get_object_or_404(BookATable, id=booking_id, user=request.user)
     if request.method == "POST":
         booking.delete()
-        return redirect('booking_list')
+        return redirect('booking_delete_confirmation')
     return render(request, 'booking/booking_delete.html', {'booking': booking})
+
+
+@login_required
+def booking_delete_confirmation(request):
+    """
+    Renders a confirmation page after a booking has been successfully updated.
+    """
+    return render(request, 'booking/booking_delete_confirmation.html')
+

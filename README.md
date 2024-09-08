@@ -4,7 +4,7 @@ Restaurant Sakura is a fine dining restaurant focusing on the south east asian c
 
 The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herokuapp.com/)
 
-![printscreen responsive website]()
+![printscreen responsive website](/static/images/printscreen/responsive_layout.png)
 
 ## Table of content
 - [UX/UI Design](#uxui-design)
@@ -47,22 +47,22 @@ The live website can be seen [here](https://restaurant-sakura-5d42605299d1.herok
 
 ## UX/UI Design
 
-I went for a quite clean design on the webpage itself - a minimal colour scheme to let the images and functions do the talking, and to give a airy feel - quite like I imagine the restaurant itself feels when you visit it! I set out with really high ambitions when it came to designing nice looking menues, responsive modals and beautiful forms to fill out - all with the help of a perfect Bootstrap grid system. Some things I managed to do - the design and visual effects on menues and modals that I imagined jsut didn't cut it into the short window of time I had for the project. The main focus was to add functionality to the different pages and make sure that the CRUD-functionality for reservations work, that the authentication part works as it should and that everything connects to the back-end and updates the Django Admin panel the way it should. To summarise - there si so much more I want to do with this webpage! But my ambition was a wee bit to high and the time a wee bit to short, as my mentor pointed out to me a couple of times. 
+I went for a clean design on the webpage itself - a minimal colour scheme to let the images and functions do the talking, and to give a airy feel - quite like I imagine the restaurant itself feels when you visit it! I set out with really high ambitions when it came to designing nice looking menues, responsive modals and beautiful forms to fill out - all with the help of a perfect Bootstrap grid system. Some of the things I managed to do - but the design and visual effects on menues and modals that I imagined, just didn't cut it into the short window of time I had for the project. The main focus was to add functionality to the different pages and make sure that the CRUD-functionality for reservations work, that the authentication part works as it should and that everything connects to the back-end and updates the Django Admin panel the way it should. To summarise - there is so much more I want to do with this webpage! But my ambition was a wee bit to high and the time a wee bit to short, as my oh so wise mentor pointed out to me a couple of times. 
 
 
 ### User Stories
 
-An agile approach was used to initialize the project - with Epics to draw out the structure for the user stories that needed to be written, and mainly to give me the bigger picture of the project. After the epics were set and the first round of user stories had been written, all the user stories were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
+An agile approach was used to initialize the project - Epics to set the main structure for the user stories that needed to be written, and to give me the bigger picture of the project. After the epics were set and the first round of user stories had been written, all the user stories were given labels to identify the must-haves, the should-haves, the could-haves and the wont-have - all in line with the MoSCoW prioritazion method.
 
-When it was time to start building the project and write all the code I had about 15 User Stories to work with. Somewhere half way through the project I realised that there was not nearly enough of them to cover all the parts of the project , and even more so I came to the conclusion that I had not put enough effort into the Acceptance Criterias and Tasks belonging to each User Story to accually simplify the work process ... Lesson learned I went back to my User Story Kanban board and pretty much started from scratch - some stories were updated and a lot more were added. I put the effort in the second time and got User Stories that really helped me in the coding process and gave me a lot of testing tools to validate teh functions on the webpage. As you can imagine this process  took a lot of time that I didn't really have that far into the project - so I learned the lesson the hard way to really take the time at the beginning of the project. But it also meant that I am really comfortable with the process of writing User Stories now, whick hopefully will help me in my next project. 
+When it was time to start building the project and write all the code I had about 15 User Stories to work with. Somewhere half way through the project I realised that there was not nearly enough stories to cover all the parts of the project, and even more so I came to the conclusion that I had not put enough effort into the Acceptance Criterias and Tasks belonging to each User Story to accually simplify my work process ... Lesson learned I went back to my User Story Kanban board and pretty much started all over - some stories I decided to keep and update with new criterias and tasks, and a lot more were added. I put the effort in the second time and got User Stories that really helped me in the coding process, plus they gave me a lot of testing tools to validate the functions on the webpage. As you can imagine this process took a lot of time that I didn't really have that far into the project - so I learned the lesson the hard way to really take the time at the beginning of the project. But it also meant that I am really comfortable with the process of writing User Stories now, whick hopefully will help me in my next project. 
 
-I ended up with a total of 24 User Stories to work with in the end, the majority o them made it into the "Done" coloumn on my Project Board, while some simply didn't make it into the project at this point due to the short amount of time at my disposal. Those stories will on the other hand be great to use if I want to continue work on the project and create a really good portfolio piece for the future. 
+I ended up with a total of 23 User Stories to work with in the end, the majority o them made it into the "Done" coloumn on my Project Board, while some simply didn't make it into the project at all at this point, due to the short amount of time at my disposal. Those stories will on the other hand be great to use if I want to continue work on the project and create a really good portfolio piece for the future. 
 
-![printscreen user story]()
+![printscreen user story](/static/images/printscreen/user_stories_list.png)
 
-I do belienve some of the stories could have been split up into even smaller parts and tasks, but if I were t do that the process would be even longer - so hopefully they are enough to give a general feel for the project and its purpose for the users. There are also a lot of Stories regarding the Admin that could have been drawn out, but since my project doesn't focus on operation and andministration of an actual restaurants webpage but at this point mainly focus on the User and their interaction with the back-end and front-end of the website - I leave those stories for the future.  
+I do belienve some of the stories could have been split up into even smaller parts and tasks, but if I were t do that the process would be even longer - so hopefully they are enough to give a general feel for the project and its purpose for the users. There are also a lot of Stories regarding the Admin that could have been drawn out - but since my project doesn't focus on operation and andministration of an actual restaurants webpage, but at this point mainly focus on the User and their interaction with the back-end and front-end of the website - I leave those stories for the future.  
 
-Below are the epics and the Stories I ended up with. If they made it all the way or need more work I will discuss further down in the [User Story testing](#user-story-testing) section. 
+Below are the epics and the Stories I ended up with. If they made it all the way to the end or need more work I will discuss further down in the [User Story testing](#user-story-testing) section. 
 
 
 __EPIC: Book a table__
@@ -129,7 +129,7 @@ As a Site Admin I can moderate and respons to reviews so that all feedback is ha
 
 ### Wireframes
 
-Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The apporach was quite a simple but straight forward design and almost every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. I really loved the process and even though I made some changes to some pages along the way, due to it not looking as I imagined when for example responsivness came into the picture - I kept all of the wireframes in its original state as a reference.
+Wireframes for both the mobile design and larger devices such as tablets and computers were made using [Balsamique](https://balsamiq.com/). The apporach was as mentioned a simple but straight forward design and almost every view got its own wireframe to make the code process as simple and effective as possible, since the design was already drawn out. I really loved the process and even though I made some changes to some pages along the way, due to it not looking as I imagined when for example responsivness came into the picture - I kept all of the wireframes in its original state as a reference.
 
 Below are some examples:
 
@@ -182,40 +182,37 @@ As I love working on the design of a web page it's easy to put way to much time 
 ![printscreen moscow open issues](/static/images/printscreen/open_issues.png) ![printscreen moscow closed issues](/static/images/printscreen/closed_issues.png)
 
 
-Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) didn't make it into the "Done" column on my Kanban board, infact they didn't even make it to "In progress" - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
-
-![printscreen MoSCoW label prioritization]()
+Important to note in this project is that some features which I believe are essential to a restaurants webpage and management system (and are therefor labeled with must-have) didn't make it into the "Done" column on my Kanban board. In fact they didn't even make it to "In progress" - since my focus in this project isn't on the administration and management of a restaurants website but mainly on the user experience. I would love to work with those components in the future though!
 
 
 
 ### Database Design
 
-Looking in the rearview mirror I set out to design a project that was a little to big to handle for little ol me - every page on the site got its on app in the root directory, because I had an idea that every page would have features that demanded its own models, views and so on ... Turns out that pages on the site like menues, location and contact could have consisted of just plain html-files placed in the projects root templates folder accompanied by some custom css. On the other hand the project is prepped for a majority of functions and cool add-ons on every page in the future since they are all structured as apps. Below is the root directory of my project, with "sakura" being the projects name, and the "booking"-app unfolded to show the content of one of the apps that fulfilles its purpose as an app at the moment. 
+Looking in the rearview mirror I set out to design a project that was a little to big to handle for little ol me - I didn't manage to finish all the things I set out to do, but hopefully I got the important stuff in place. On the other hand the project is perfect to further develop and work with in the future. 
+Below is the root directory of my project, with "sakura" being the projects name and the "booking"-app unfolded to show the content of one of the apps. The project consists of one app named landing_page that contains views and paths to html pages/templates such as Contact, Menu etc that dont need their own app structure. Then we have the booking-app and the contact-app which both contains custom models, views and forms.
 
-Project consist of one main project named sakura, one landing-page app containing multiple templates and two apps named booking and contact containing models, views and son on
-
-![printscreen root directory]()
+![printscreen root directory](/static/images/printscreen/root_directory.png)
 
 
 __Entity Relationship Diagrams(ERD)__
 
-Two custom models were made for the project, one to handle the "Book a table" form in the booking-app, and one to handle the "Contact"-form in the contact-app. Below is the original ERD's that were drawn out before the models were made. The User model is handled by the Django Framework. The ERD shows that the User model has a one-to-many relationship with my custom BookATable model - a User can make many bookings and many fields in the User model can be associated with the BookATable model, while only one field in the BookATable model is associated with one exact line in the User model.
+Two custom models were made for the project, one to handle the "Book a table" form in the booking-app, and one to handle the "Contact" form in the contact-app. Below is the original ERD's that were drawn out before the models were made. The User model is handled by the Django Framework. The ERD shows that the User model has a one-to-many relationship with my custom BookATable model - a User can make many bookings and many fields in the User model can be associated with the BookATable model, while only one field in the BookATable model is associated with one exact line in the User model.
 
 ![printscreen entity relationship diagram](/static/images/erd_diagram.png)
 
 
-I ended up making some adjustments to both my custom models later on in the development, some time after the ERD's were made. the ContactRestaurant model has been updated with a CharField for "Subject", for easier administration of the incoming questions from user. The BookATable got a CharField to be able to handle timeslots - instead of a TimeField(courtesy of my mentor).
+I ended up making some adjustments to both my custom models later on in the development, some time after the ERD's were made. the ContactRestaurant model has been updated with a CharField for "Subject", for easier administration of the incoming questions from user. The BookATable got a CharField to be able to handle timeslots - instead of a TimeField as was the case from the start (courtesy of my mentor).
 
 
 ![printscreen bookatable model](/static/images/printscreen/bookatable_model.png) ![printscreen contactrestaurant model](/static/images/printscreen/contact_restaurant_model.png)
 
 
-My BookATable model got some extra features to deal with form valiation that I would not have sorted out without the help of my mentor Spencer Barriball. 
+My BookATable model got some extra features to deal with all the form valiation that I would not have sorted out without the help of my mentor Spencer Barriball. 
 
 ![printscreen additional features bookatable model](/static/images/printscreen/additional_functions_bookatable_model.png)
 
 
-Spencer also supported me in creating a BookingManager that checks to se if the model does the trick in the database, besides from what I can see in the Django admin panel. I can run a command like the one below to be able to see all of todays booking in the terminal and make sure the database si running as it should:
+Spencer also supported me in creating a BookingManager that checks to se if the model does the trick in the database, besides from what I can see in the Django admin panel. I can run a command like the one below to be able to see all of todays booking in the terminal and make sure the database is running as it should:
 "todays_bookings = BookATable.objects.todays_bookings()
 print(todays_bookings)"
 
@@ -239,7 +236,7 @@ The mobile version containts pretty much the same features but presented in a re
 
 ### Navigation menu
 
-The navigation menu consist of links to various other pages - such as a Contact page, a Location page, a page to view the menues and a highlighted button redirecting the visitor to the page where they can book a table. It also consist of links to the restaurants social media pages, which at the moment all lead to the various landing pages of the social media platforms. At the far right of the navigation menu are two links leading to a page for Registration or Sign In - so that the visitor have the option to register an acoount and then Sign in to be able to view, edit or delete their reservation - all in line with the __CRUD__ functionality. 
+The navigation menu consist of links to various other pages - such as a Contact page, a Location page, a page to view the menues and a highlighted button redirecting the visitor to the page where they can book a table. It also consist of links to the restaurants social media pages, which at the moment all lead to the various landing pages of the social media platforms. At the far right of the navigation menu are two links leading to a page for Registration or Sign In - so that the visitor have the option to register an acoount and then Sign in to be able to view, edit or delete their reservation - all in line with the __CRUD__ functionality. When logged in the user will instead see the options of "My reservations" or "Logout" at the far right.
 
 ![printscreen web page navigation menu](/static/images/printscreen/nav-bar.png)
 
@@ -258,7 +255,7 @@ The last view on the main page consists of another appealing image and a button 
 
 ![printscreen third view landing page and footer](/static/images/printscreen/landing_page_third_view_footer.png)
 
-On mobile devices one of the images dissappear, along with the repeating Book a table-buttons as to not stack to much stuff on top of each other. Below this content is just a responsive version of the footer.
+On mobile devices one of the images dissappear, along with the repeating Book a table-button, as to not stack to much stuff on top of each other. Below this content is just a responsive version of the footer.
 
 ![printscreen mobile second view landing page](/static/images/printscreen/mobile_second_view.png)
 
@@ -269,7 +266,7 @@ The location page is pretty straight forward - information about where the resta
 
 ![printscreen restaurants location page](/static/images/printscreen/location_page.png)
 
-The mobile version of the location page is just a responsive version with the same content. 
+The mobile version of the location page is simply a responsive version with the same content. 
 
 ![printscreen mobile restaurants location page](/static/images/printscreen/mobile_location_page.png)
 
@@ -284,73 +281,76 @@ Below the contact info is a handy form that the user can choose to fill out if t
 
 ![printscreen contact form](/static/images/printscreen/contact_form.png)
 
-Mobile versions of the contact page - same contact but responsive layout. 
+Mobile versions of the contact page - same content but responsive layout. 
 
 ![printscreen contact information](/static/images/printscreen/mobile_contact_page.png) ![printscreen contact form](/static/images/printscreen/mobile_contact_form.png)
 
-In line with a user friedly interface the site user gets an immediate respons valiadating that their message has been sent succesfully, or if there is any errors with the way they filled out the form. 
+In line with a user friedly interface the site user gets an immediate respons valiadating that their message has been sent succesfully, or if there is any errors with the way they filled out the form. The validation is a po-up module created with the help of Bootstrap modules, and some custom js-script that I had to ask ChatGpt to debug in the end since I never got it quite right with redirectiong to the right urls. 
 
-![printscreen user respons from contact form]()
+![printscreen user respons from contact form](/static/images/printscreen/contact_confirmation.png)
 
 
 ### Book a table page
 
 On the page called "Book a table" the user has the option to fill out a form to make a reservation at the restaurant, without having to contact the restaurant via email or phone. All with the goal of making it as simple for the site user as possible to make the excellent decision to visit the restaurant. The mobile version of the page looks and feels the same, but responsive to different devices of course.
 
-The form contains a Timeslot function for the site users to choose from when making a reservation and validation functions that prevent users from picking a date back in time. There is also the option to add a message to the restaurant - all in line with the user story about being able to make special requests when making a reservation at the restaurant. 
-
-plus cant book more than 30 days in advance, 
-avaliable seats limit to 100
-
 ![printscreen book a tabel form](/static/images/printscreen/booking_page.png)
 
-The site user will get a direct respons on the webpage confirming a successful booking, or different validation error messages if something is filled in incorrectly.They will also recieve an email confirmation containing the booking information. 
+The form contains a Timeslot function for the site users to choose from when making a reservation and validation functions that prevent users from picking a date back in time. There is also the option to add a message to the restaurant - all in line with the user story about being able to make special requests when making a reservation at the restaurant. There are also some validation features making sure you cannot book a table to far into the future (30 days or more), and no bigger party than 8 guests. 
 
-![printscreen user respons from booking form]()
+![printscreen validaton past dates](/static/images/printscreen/error_booking_date.png) ![printscreen validation 30 days](/static/images/printscreen/30_days_validation.png)
+
+The site user will get a direct respons on the webpage confirming a successful booking, or different validation error messages if something is filled in incorrectly.
+
+![printscreen user respons from booking form](/static/images/printscreen/booking_confirmation.png)
 
 
 ### Register account/sign in and view reservations page
 
+The Sign-Up/Register and Sign-in page have the same feel to them and the forms got some styling with the help of Django Crispy forms. They both contain password validation.
+
+![printscreen sign up](/static/images/printscreen/sign-up_page_large.png)
+
+![printscreen sign in](/static/images/printscreen/sign_in_larger_screen.png)
+
+The mobile version contains the same info but in a responsive design. 
+
+![printscreen mobile sign up](/static/images/printscreen/sign-up_page.png) ![printscreen mobile sign in](/static/images/printscreen/sign_in_page.png)
+
+When logged in the user has the option to logut, before they do so they get the question to confirm logging out a second time. 
+
+![printscreen sign out confirmation](/static/images/printscreen/sign_out.png)
 
 
-![printscreen]()
+When registered and logged in the user has the option to view a list of their reservations (that have been made after they registered for an account) and there they can edit or choose to delte their reservation. The reservations are ordered by date with the closest upcomming one first.
 
-![printscreen]()
+![printscreen reservation list](/static/images/printscreen/list_reservations.png)
 
-![printscreen]()
+When choosing to edit the user is redirected to a form similar to the original Booking form, where they can update all the fields if they want to and then save their changes. 
 
-![printscreen]()
+![printscreen edit reservation](/static/images/printscreen/edit_reservation.png)
+
+Unfortunately I didn't get an confirmation modal working for the edit confirmation and delete confirmation, so to confirm their actions the user is redirected to a new page, and then back to the list of reservations view. 
+
+![printscreen edit confirmation](/static/images/printscreen/edit_confirmation.png)
 
 
 
 ### Potential future features
 
-There are A LOT of features that can be added to the page. The project became a bit bigger than my current skill set and even though I probably would have worked out a lot of the functions if I had the time for it - I unfortunately do not. 
+There are A LOT of features that can be added to the page. The project became a bit bigger than my current skill set and even though I probably would have worked out a lot of the functions if I had the time for it - I unfortunately do not at this point.
 
 There is still many functions to be added when it comes to the administration of the page - such as a UX friendly interface for the staff to deal with customer inquieres, modify bookings and so on - but that is a whole different project. 
 
 Another part of the project that would add a lot of value to the user would be a page dedicated to reviews. And those user stories I have written regarding reviews would have been a nice place to start to get the CRUD-functionality up and running. Unfortunately I didn't come to that conclusion until way to late into the project - so I decided to stick with the user being able to edit a reservation. If I were to do it again I would have started with a review page and probably be satisfied with that. 
 
-I would also have loved some form of interactive picture section, with for example images tagged on Instagram taken at the restaurant. 
+I would also have loved some sort of interactive picture section, with for example images tagged on Instagram taken at the restaurant. 
 
-Another important feature for a restaurant to have would be a function for sending an email to the visitor with their booking confirmation, in case they make a reservation at the restaurant. I started working on that but quickly gave up the idea due to other functions that were more important to get up and running. 
+Another important feature for a restaurant to have would be a function for sending an email to the visitor containing their booking confirmation and the booking policy, in case they make a reservation at the restaurant. I started working on that but quickly gave up the idea due to other functions that were more important to get up and running. 
 
-Acceptance criterias regarding cancellation 
-The system prevents modifications or cancellations within a certain timeframe (e.g., 24 hours before the booking), if applicable.
+I would also like to add some Acceptance Criterias and functions regarding cancellations closer than 24 hours before the reservation, a unique booking number for user reference when interacting with the restaurant, the ability to book tables for bigger events, notification of fully booked timeslots and the list goes on. 
 
-Unique booking numer for reference, reminder of booking
-boka bord för special event
-upptagent tidsslot
 
-The booking policy is included in the confirmation email sent to the visitor.
-
-mailto:link i contact, phonenumber clickable
-
-Special hours (e.g., holidays or special events) can be displayed and updated easily by the administrator.
-
- - Create an interface for administrators to update the hours without needing to modify code.
-
- recover password
 
 ## Technologies used
 
@@ -362,7 +362,7 @@ Special hours (e.g., holidays or special events) can be displayed and updated ea
 
 
 ### Database
-- CI Database URL (Postgres) - used to store all data
+- CI Database URL (Postgres) - used to store all data.
 
 
 ### Frameworks
@@ -391,9 +391,10 @@ Django - main framework for a secure and resuable development process.
 Images are hosted in the projects static directory for this project, but in the future I want to work Cloudinary.
 
 
+
 ## Manual testing
 
-The manual testing consisted of not only the things listed below, but they also meant asking everybody I know to test the website and all its functions such as filling out the Contact form, Booking a table via the form, register for an account and then login to see their reservations - and of course try to update or delete a reservation.
+The manual testing consisted of not only the things listed below, but the testing also meant asking everybody I know to test the website and all its functions - such as filling out the Contact form, Booking a table via the form, register for an account and then login to see their reservations - and of course try to update/edit or delete a reservation. All while I checked the admin panel for real-time action. 
 
 ### Responsivness 
 
@@ -423,7 +424,7 @@ There were quite a few files to run throught the PEP8 validator, many of them wi
 
 ![printscreen python validator](/static/images/printscreen/python_validator.png)
 
-When testing the accessibility using Lighthouse for Chrome,
+When testing the accessibility using Lighthouse for Chrome, the result didn't really end up where I like them to be, but I'll go with that for now. 
 
 ![printscreen lighthouse]()
 
@@ -452,6 +453,8 @@ Most of them have been sorted out in the end - mainly thanks to Google and some 
 Some things I haven't been able to sort out up to date - when a site user first makes a booking as a guest, and then registers for an accound the connection between their email and reservations isn't fully in place. So at the moment only users that have registered and then Make a reservation can view and edit their reservations. I tried to sort it out with adding a signals.py file to my booking app and updating the apps.py but its still not in place. 
 
 Also some alert messages that follow along with the Django Allauth is causing havock on the admin page when you make a lot of successful registrations, sign ins, bookings and so on at the same time. Good thing the messages work though - but not in an optimal way just yet. 
+
+At this point the confirmation messages for signing in and out only show up on the admin panel page, and even though I have tried to redirect the messages, create modules and tried to redirect the Sign-In action to a new page based on a confirmation html-file there were always a new error showing up - so for the being this function does not work as I intended it to. 
 
 
 ## Deployment
